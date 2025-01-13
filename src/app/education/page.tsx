@@ -1,6 +1,12 @@
+import Layout from "../layout";
+import BackButton from "../../components/BackButton";
+
 export default function EducationPage() {
   return (
-    <main className="bg-black text-white min-h-screen py-32 px-6"> {/* Increased padding */}
+    <Layout>
+    <div className="bg-black
+   text-white min-h-screen py-32 px-6"> {/* Increased padding */}
+   <BackButton />
       <div className="container mx-auto max-w-4xl">
         {/* Header Section */}
         <header className="mb-16">
@@ -102,6 +108,7 @@ export default function EducationPage() {
           </section>
         </div>
       </div>
-    </main>
+    </div>
+    </Layout>
   );
 }

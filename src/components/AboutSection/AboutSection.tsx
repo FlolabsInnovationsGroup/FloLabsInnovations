@@ -6,23 +6,20 @@ export default function AboutSection() {
       image: "/images/conversationalai.png",
       title: "Conversational AI",
       description: "Intelligent conversational AI for personalized travel planning.",
+      link: "https://www.flomadtravel.com/",
     },
     {
       image: "/images/aiagirobotics.png",
       title: "AI/AGI/Robotics",
       description: "Empowering leaders to excel in AI and robotics through education.",
+      link: "https://flomad.international/",
     },
     {
       image: "/images/caipo.png",
       title: "Chief AI Productivity Officer",
       description:
         "A groundbreaking role to maximize productivity through AI-driven insights.",
-    },
-    {
-      image: "/images/spaceexploration.png", // Example additional project
-      title: "Space Exploration",
-      description:
-        "Exploring new frontiers through advanced AI and robotics systems.",
+      link: "https://www.caipo.ai/",
     },
   ];
 
@@ -39,13 +36,14 @@ export default function AboutSection() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
               image={project.image}
               title={project.title}
               description={project.description}
+              link={project.link} // Pass the link for each card
             />
           ))}
         </div>

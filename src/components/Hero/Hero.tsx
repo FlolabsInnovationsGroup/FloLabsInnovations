@@ -12,16 +12,34 @@ export default function Hero() {
     <section
       className={`bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
     >
-      {/* Title */}
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl">
-        Flomad Labs R&D
-      </h1>
+      {/* Content Wrapper */}
+      <header className="text-center">
+        {/* Title */}
+        <h1
+          className="text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl animate-fadeIn"
+          aria-label="Flomad Labs Research and Development"
+        >
+          Flomad Labs R&D
+        </h1>
 
-      {/* Subtitle */}
-      <p className="text-xl md:text-3xl text-center max-w-3xl leading-relaxed drop-shadow-lg">
-        An AI and Robotics Research & Development Collective
-      </p>
+        {/* Subtitle */}
+        <p
+          className="text-xl md:text-3xl max-w-3xl leading-relaxed drop-shadow-lg animate-fadeInDelay"
+          aria-label="An AI and Robotics Research and Development Collective"
+        >
+          An AI and Robotics Research & Development Collective
+        </p>
+
+        {/* Optional Call-to-Action */}
+        <div className="mt-8">
+          <a
+            href="#about"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition transform hover:scale-105"
+          >
+            Learn More
+          </a>
+        </div>
+      </header>
     </section>
   );
 }
-

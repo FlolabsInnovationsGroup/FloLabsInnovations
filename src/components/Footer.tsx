@@ -1,4 +1,5 @@
 import { FaEnvelope, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,23 +12,25 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Follow us</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="mailto:info@flomadlabs.com"
                 className="hover:text-blue-400 transition duration-300"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="tel:+123456789"
                 className="hover:text-blue-400 transition duration-300"
                 aria-label="Phone"
               >
                 <FaPhoneAlt className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/flomadlabs"
                 className="hover:text-blue-400 transition duration-300"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin className="w-6 h-6" />
               </a>
@@ -39,9 +42,9 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="hover:text-blue-400 transition duration-300">
+                <Link href="/" className="hover:text-blue-400 transition duration-300">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#about" className="hover:text-blue-400 transition duration-300">
@@ -66,17 +69,32 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Our other websites</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://www.flomadtravel.com/" className="hover:text-blue-400 transition duration-300">
+                <a
+                  href="https://www.flomadtravel.com/"
+                  className="hover:text-blue-400 transition duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Flomad Travel
                 </a>
               </li>
               <li>
-                <a href="https://flomad.international/" className="hover:text-blue-400 transition duration-300">
+                <a
+                  href="https://flomad.international/"
+                  className="hover:text-blue-400 transition duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Flomad International
                 </a>
               </li>
               <li>
-                <a href="https://www.caipo.ai/" className="hover:text-blue-400 transition duration-300">
+                <a
+                  href="https://www.caipo.ai/"
+                  className="hover:text-blue-400 transition duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   CAIPO
                 </a>
               </li>
@@ -116,25 +134,6 @@ export default function Footer() {
                 Subscribe
               </button>
             </form>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>A Flomad Labs R&D company</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition">
-              About Flomad Labs R&D
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Flomad Labs R&D products
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Terms
-            </a>
           </div>
         </div>
       </div>

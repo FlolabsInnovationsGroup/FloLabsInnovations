@@ -1,6 +1,11 @@
+import Layout from "../layout";
+import BackButton from "../../components/BackButton";
+
 export default function AIAndRoboticsPage() {
     return (
-      <main className="bg-black text-white min-h-screen py-32 px-6">
+      <Layout>
+      <div className="bg-black text-white min-h-screen py-32 px-6">
+        <BackButton />
         <div className="container mx-auto max-w-4xl">
           {/* Header Section */}
           <header className="mb-20">
@@ -131,7 +136,8 @@ export default function AIAndRoboticsPage() {
             </section>
           </div>
         </div>
-      </main>
+      </div>
+      </Layout>
     );
   }
   

@@ -1,0 +1,23 @@
+"use client"; // Required for client-side hooks
+
+import { usePathname, useRouter } from "next/navigation";
+
+export default function BackButton() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Don't render the button on the homepage
+  if (pathname === "/") return null;
+
+  return (
+    <div className="mt-4">
+      <button
+        onClick={() => router.push("/")}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition transform hover:scale-105 hover:shadow-md"
+        aria-label="Go back to the homepage"
+      >
+        ← Back to Home
+      </button>
+    </div>
+  );
+}

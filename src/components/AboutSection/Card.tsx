@@ -5,6 +5,7 @@ interface CardProps {
   bgColor?: string; // Optional background color
   buttonText?: string; // Optional button text
   buttonLink?: string; // Optional button link
+  link?: string; // Optional link for the entire card
 }
 
 export default function Card({
@@ -14,10 +15,14 @@ export default function Card({
   bgColor = "bg-[#121212]",
   buttonText,
   buttonLink,
+  link,
 }: CardProps) {
   return (
-    <div
-      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out`}
+    <a
+      href={link || buttonLink || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out block`}
     >
       {/* Image Section */}
       <div className="overflow-hidden">
@@ -36,14 +41,18 @@ export default function Card({
         <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
         {/* Optional Button */}
         {buttonText && buttonLink && (
-          <a
-            href={buttonLink}
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
-          >
-            {buttonText}
-          </a>
+          <div className="mt-4">
+            <a
+              href={buttonLink}
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {buttonText}
+            </a>
+          </div>
         )}
       </div>
-    </div>
+    </a>
   );
 }

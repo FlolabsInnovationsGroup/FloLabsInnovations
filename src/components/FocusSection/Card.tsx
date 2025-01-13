@@ -1,11 +1,12 @@
 interface CardProps {
-  image: string;
-  title: string;
-  description: string;
+  image: string; // URL for the card image
+  title: string; // Card title
+  description: string; // Card description
+  link?: string; // Optional link for the card
 }
 
-export default function Card({ image, title, description }: CardProps) {
-  return (
+export default function Card({ image, title, description, link }: CardProps) {
+  const cardContent = (
     <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
       {/* Image Section */}
       <div className="overflow-hidden">
@@ -40,5 +41,14 @@ export default function Card({ image, title, description }: CardProps) {
         </div>
       </div>
     </div>
+  );
+
+  // If the `link` prop is provided, wrap the card with a link
+  return link ? (
+    <a href={link} className="block">
+      {cardContent}
+    </a>
+  ) : (
+    cardContent
   );
 }

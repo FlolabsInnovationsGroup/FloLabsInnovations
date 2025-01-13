@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CardProps {
   image: string; // URL for the card image
   title: string; // Card title
@@ -19,29 +21,34 @@ export default function Card({
     <div
       className={`${bgColor} text-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out`}
     >
-      {/* Image */}
+      {/* Image Section */}
       <div className="overflow-hidden rounded-lg">
         <img
-          src={image || "/images/default-placeholder.png"} // Fallback image
+          src={image}
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/images/default-placeholder.png";
+          }}
+          className="w-full h-48 md:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
         />
       </div>
 
-      {/* Title */}
+      {/* Title Section */}
       <h3 className="text-xl font-bold mt-4 mb-2 tracking-tight">{title}</h3>
 
-      {/* Description */}
+      {/* Description Section */}
       <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
 
-      {/* Optional Button */}
+      {/* Button Section */}
       {buttonText && buttonLink && (
-        <a
-          href={buttonLink}
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
-        >
-          {buttonText}
-        </a>
+        <Link href={buttonLink}>
+          <span
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+            aria-label={`Learn more about ${title}`}
+          >
+            {buttonText}
+          </span>
+        </Link>
       )}
     </div>
   );

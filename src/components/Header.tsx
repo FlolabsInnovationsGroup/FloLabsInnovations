@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link"; // Import Next.js Link component for navigation
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,25 +10,25 @@ export default function Header() {
     <header className="fixed w-full z-50 text-white">
       <div className="container mx-auto flex justify-between items-center px-4 py-4">
         {/* Logo */}
-        <Link href="/" legacyBehavior>
-          <a className="text-2xl md:text-3xl font-bold tracking-wide cursor-pointer">
+        <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
+          <Link href="/" className="hover:text-blue-400 transition">
             Flomad Labs <span className="text-blue-500">R&D</span>
-          </a>
-        </Link>
+          </Link>
+        </h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex justify-center flex-1 space-x-8 text-sm font-medium tracking-wide">
-          <Link href="/#focus" legacyBehavior>
-            <a className="hover:text-blue-400 transition">Focus</a>
+          <Link href="#about" className="hover:text-blue-400 transition">
+            About
           </Link>
-          <Link href="/#about" legacyBehavior>
-            <a className="hover:text-blue-400 transition">About</a>
+          <Link href="#research" className="hover:text-blue-400 transition">
+            Research
           </Link>
-          <Link href="/#technologies" legacyBehavior>
-            <a className="hover:text-blue-400 transition">Technologies</a>
+          <Link href="#technologies" className="hover:text-blue-400 transition">
+            Technologies
           </Link>
-          <Link href="/#links" legacyBehavior>
-            <a className="hover:text-blue-400 transition">Links</a>
+          <Link href="#explore" className="hover:text-blue-400 transition">
+            Explore
           </Link>
         </nav>
 
@@ -44,17 +44,17 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="md:hidden bg-black bg-opacity-90 py-4 px-4 space-y-4">
-          <Link href="/#focus" legacyBehavior>
-            <a className="block hover:text-blue-400 transition">Focus</a>
+          <Link href="#about" className="block hover:text-blue-400 transition">
+            About
           </Link>
-          <Link href="/#about" legacyBehavior>
-            <a className="block hover:text-blue-400 transition">About</a>
+          <Link href="#research" className="block hover:text-blue-400 transition">
+            Research
           </Link>
-          <Link href="/#technologies" legacyBehavior>
-            <a className="block hover:text-blue-400 transition">Technologies</a>
+          <Link href="#technologies" className="block hover:text-blue-400 transition">
+            Technologies
           </Link>
-          <Link href="/#links" legacyBehavior>
-            <a className="block hover:text-blue-400 transition">Links</a>
+          <Link href="#explore" className="block hover:text-blue-400 transition">
+            Explore
           </Link>
         </nav>
       )}

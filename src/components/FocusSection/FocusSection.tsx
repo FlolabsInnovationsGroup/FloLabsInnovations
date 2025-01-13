@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Card from "../FocusSection/Card";
-import { link } from "fs";
 
 export default function FocusSection() {
   const focuses = [
@@ -9,27 +8,28 @@ export default function FocusSection() {
       title: "Education",
       description:
         "Revolutionizing learning through AI-powered educational tools and platforms.",
-        link: "/education",
+      link: "/education",
     },
     {
       image: "/images/healthcare.png",
       title: "Healthcare",
       description:
         "Advancing medical research and patient care with cutting-edge AI.",
-        link: "/healthcare",
+      link: "/healthcare",
     },
     {
       image: "/images/travel.png",
       title: "Travel",
       description:
         "Enhancing travel experiences with intelligent automation and personalization.",
-        link: "/travel",
+      link: "/travel",
     },
     {
-      image: "/images/space.png", // Add your space image here
+      image: "/images/space.png",
       title: "Space",
       description:
         "Advancing space exploration and travel with AI-driven technologies and innovation.",
+      link: "/space",
     },
   ];
 
@@ -46,8 +46,8 @@ export default function FocusSection() {
           elevate human potential.
         </p>
 
-       {/* Cards Grid */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {focuses.map((focus, index) => (
             <div key={index}>
               {focus.link ? (
@@ -72,4 +72,3 @@ export default function FocusSection() {
     </section>
   );
 }
-
