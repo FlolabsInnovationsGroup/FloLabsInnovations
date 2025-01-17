@@ -1,12 +1,10 @@
-import Layout from "../layout";
-import BackButton from "../../components/BackButton";
+import MainLayout from "../../components/MainLayout";
 
 export default function AITravelPage() {
 
     return (
-      <Layout>
+      <MainLayout>
       <div className="bg-black text-white min-h-screen py-32 px-6">
-        <BackButton />
         <div className="container mx-auto max-w-4xl">
           {/* Header Section */}
           <header className="mb-20">
@@ -70,7 +68,7 @@ export default function AITravelPage() {
           </div>
         </div>
       </div>
-      </Layout>
+      </MainLayout>
     );
   }
   
