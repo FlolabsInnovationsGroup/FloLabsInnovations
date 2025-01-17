@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   image: string; // URL for the card image
   title: string; // Card title
@@ -9,11 +11,13 @@ export default function Card({ image, title, description, link }: CardProps) {
   const cardContent = (
     <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
       {/* Image Section */}
-      <div className="overflow-hidden">
-        <img
+      <div className="relative w-full h-48">
+        <Image
           src={image}
           alt={title}
-          className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
+          layout="fill"
+          objectFit="cover"
+          className="hover:scale-110 transition-transform duration-300"
         />
       </div>
 
@@ -45,7 +49,7 @@ export default function Card({ image, title, description, link }: CardProps) {
 
   // If the `link` prop is provided, wrap the card with a link
   return link ? (
-    <a href={link} className="block">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
       {cardContent}
     </a>
   ) : (

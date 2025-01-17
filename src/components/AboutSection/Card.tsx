@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   image: string; // Image URL
   title: string; // Card title
@@ -26,9 +28,11 @@ export default function Card({
     >
       {/* Image Section */}
       <div className="overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
+          width={400} // Replace with actual dimensions
+          height={300} // Replace with actual dimensions
           className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
         />
       </div>
