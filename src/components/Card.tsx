@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface CardProps {
   image: string; // URL for the card image
@@ -23,13 +24,13 @@ export default function Card({
     >
       {/* Image Section */}
       <div className="overflow-hidden rounded-lg">
-        <img
+        <Image
           src={image}
           alt={title}
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = "/images/default-placeholder.png";
-          }}
+          width={400}
+          height={300}
           className="w-full h-48 md:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+          onError={() => "/images/default-placeholder.png"} // Fallback for invalid images
         />
       </div>
 
@@ -41,13 +42,13 @@ export default function Card({
 
       {/* Button Section */}
       {buttonText && buttonLink && (
-        <Link href={buttonLink}>
-          <span
+        <Link href={buttonLink} passHref>
+          <a
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
             aria-label={`Learn more about ${title}`}
           >
             {buttonText}
-          </span>
+          </a>
         </Link>
       )}
     </div>

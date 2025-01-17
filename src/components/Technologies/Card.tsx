@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface TechnologyCardProps {
-  image: string;
-  title: string;
-  description: string;
-  link: string; // Add a link prop for redirection
+  image: string; // URL for the card image
+  title: string; // Card title
+  description: string; // Card description
+  link: string; // Link for redirection
 }
 
 export default function TechnologyCard({
@@ -14,14 +15,20 @@ export default function TechnologyCard({
   link,
 }: TechnologyCardProps) {
   return (
-    <Link href={link}>
-      <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <Link href={link} passHref>
+      <a
+        className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {/* Image Section */}
-        <div className="overflow-hidden">
-          <img
+        <div className="relative w-full h-48">
+          <Image
             src={image}
             alt={title}
-            className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
+            layout="fill"
+            objectFit="cover"
+            className="hover:scale-110 transition-transform duration-300"
           />
         </div>
 
@@ -48,7 +55,7 @@ export default function TechnologyCard({
             </svg>
           </div>
         </div>
-      </div>
+      </a>
     </Link>
   );
 }
