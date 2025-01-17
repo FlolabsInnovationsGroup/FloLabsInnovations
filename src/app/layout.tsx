@@ -1,5 +1,7 @@
 import "../styles/globals.css"; // Global CSS styles
 import { Inter, Roboto_Mono } from "next/font/google";
+import Header from "../components/Header"; // Import your Header component
+import Footer from "../components/Footer"; // Import your Footer component
 
 // Define fonts
 const inter = Inter({
@@ -32,9 +34,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${robotoMono.variable} antialiased bg-gradient-to-b from-black via-[#121212] to-[#1e1e1e] text-white`}
       >
-        {children}
+        <Header /> {/* Add the Header component */}
+        <main>{children}</main> {/* Render the page-specific content */}
+        <Footer /> {/* Add the Footer component */}
       </body>
     </html>
   );
 }
-
