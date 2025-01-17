@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Hero from "../components/Hero/Hero";
 
-const FocusSection = dynamic(() => import("../components/FocusSection/FocusSection"));
-const AboutSection = dynamic(() => import("../components/AboutSection/AboutSection"));
-const Technologies = dynamic(() => import("../components/Technologies/Technologies"));
+import FocusSection from "../components/FocusSection/FocusSection";
+import AboutSection from "../components/AboutSection/AboutSection";
+import Technologies from "../components/Technologies/Technologies";
+
 
 export const metadata: Metadata = {
   title: "Flomad Labs R&D",

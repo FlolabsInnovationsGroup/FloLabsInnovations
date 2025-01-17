@@ -24,8 +24,16 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="bg-black text-white py-16">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section
+      id="about"
+      className="text-white py-16"
+      style={{
+        backgroundImage: `url('/images/tunnelbackground.png')`, // Apply background image
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="container mx-auto px-6 lg:px-12 bg-black bg-opacity-75 rounded-lg py-12">
         {/* Section Title */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8">
           About Us

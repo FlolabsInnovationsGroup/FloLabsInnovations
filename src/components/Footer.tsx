@@ -101,39 +101,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Stay Connected Section */}
+          {/* Stay Connected Section with Beehiiv Embed */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Stay connected with us</h3>
-            <form>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-sm mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="firstName" className="block text-sm mb-2">
-                  First name
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500"
-                  placeholder="Enter your first name"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded w-full transition duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
+            <iframe
+              src="https://embeds.beehiiv.com/53c7ac00-2964-4f87-ba7d-c7b87146ad90"
+              data-test-id="beehiiv-embed"
+              width="100%"
+              height="320"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                borderRadius: "4px",
+                border: "2px solid #e5e7eb",
+                backgroundColor: "transparent",
+              }}
+            ></iframe>
           </div>
         </div>
       </div>
