@@ -4,111 +4,117 @@ import BackButton from "../../components/BackButton";
 export default function EducationPage() {
   return (
     <Layout>
-    <div className="bg-black
-   text-white min-h-screen py-32 px-6"> {/* Increased padding */}
-   <BackButton />
-      <div className="container mx-auto max-w-4xl">
-        {/* Header Section */}
-        <header className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
-            Flomad Labs R&D’s AI Internship Program
-          </h1>
-          <p className="text-lg text-gray-400 leading-relaxed">
-            As artificial intelligence reshapes industries and transforms the global job market,
-            Flomad Labs’ AI Education Internship Program steps in to ensure students are ready
-            to meet the challenge.
-          </p>
-        </header>
+      <div className="bg-black text-white min-h-screen py-32 px-6">
+        {/* Back Button */}
+        <BackButton />
 
-        {/* Content Sections */}
-        <div className="space-y-16">
-          {/* Section 1 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Program Overview</h2>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              By combining practical experience with innovative tools and technologies, the program
-              equips participants with the skills they need to thrive in an AI-driven workforce.
+        {/* Main Content Container */}
+        <div className="container mx-auto max-w-4xl">
+          {/* Header Section */}
+          <header className="mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+              Flomad Labs R&D: A Unique Experiential Platform for AI, Robotics, and Entrepreneurship
+            </h1>
+            <p className="text-lg text-gray-400 leading-relaxed">
+              Empowering Learners with Hands-On Experience and Career Growth
             </p>
-            <p className="text-gray-300 leading-relaxed">
-              This comprehensive approach reflects Flomad Labs’ commitment to bridging education and
-              industry, providing opportunities that extend far beyond traditional classroom learning.
+            <p className="text-gray-300 mt-4 leading-relaxed">
+              These are the pathways of Flomad Labs R&D. Its mission: to provide immersive, hands-on education, fostering practical skills, and supporting learners in achieving their career aspirations.
             </p>
-          </section>
+          </header>
 
-          {/* Section 2 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Expanding Skills Across Disciplines</h2>
-            <ul className="list-disc list-inside space-y-4 text-gray-300">
-              <li>
-                <strong>Engineering and Robotics:</strong> Building intelligent systems,
-                including autonomous machines and advanced sensors.
-              </li>
-              <li>
-                <strong>Software Development and UX/UI Design:</strong> Designing intuitive
-                applications that incorporate AI tools.
-              </li>
-              <li>
-                <strong>Sound Engineering and Podcasting:</strong> Leveraging AI to automate editing
-                and enhance audio quality.
-              </li>
-              <li>
-                <strong>Marketing and Project Management:</strong> Harnessing AI for data-driven
-                insights and efficient workflows.
-              </li>
-            </ul>
-          </section>
+          {/* Content Sections */}
+          <div className="space-y-16">
+            {/* Section 1 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">A World of Innovation Awaits</h2>
+              <p className="text-gray-300 leading-relaxed">
+                The future is being shaped by advancements in AI, robotics, and entrepreneurial innovation. At Flomad Labs R&D, we equip students, career changers, and lifelong learners with the skills, tools, and experiences necessary to thrive in this transformative era. By engaging in real-world projects, participants gain an in-depth understanding of how to navigate and contribute to rapidly evolving industries.
+              </p>
+            </section>
 
-          {/* Section 3 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Learning by Doing</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Flomad Labs prioritizes experiential learning, allowing students to work on meaningful
-              projects that simulate professional scenarios. Participants gain hands-on experience
-              that strengthens their problem-solving abilities.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              As one participant noted, “You don’t just learn theories—you put them into action and
-              see results.”
-            </p>
-          </section>
+            {/* Section 2 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Fuel Your Journey of Discovery</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Our internship program is more than a learning experience—it’s a solution to the challenges many face when seeking meaningful internships and career opportunities.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Unlike typical internships, Flomad Labs R&D offers structured programs that maximize learning and career growth. Participants are immersed in real-world projects, collaborating in teams to explore the possibilities of AI, robotics, and entrepreneurship. Through this process, they acquire practical experience in ideation, research, development, and product evolution.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                With flexible, remote options, our program ensures accessibility to learners worldwide, fostering collaboration across diverse cultures and backgrounds.
+              </p>
+            </section>
 
-          {/* Section 4 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Adapting to the Future Job Market</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The program acknowledges the rapid pace of technological change. By exposing students
-              to AI tools and practices, the internship prepares them to excel in industries that
-              increasingly rely on automation and intelligent systems.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              With reports predicting a surge in demand for AI-related roles, Flomad Labs ensures
-              participants are equipped to enter and thrive in the job market.
-            </p>
-          </section>
+            {/* Section 3 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Why AI, Robotics, and Entrepreneurship?</h2>
+              <ul className="list-disc list-inside space-y-4 text-gray-300">
+                <li>Mastering the latest tools and technologies through immersive learning experiences.</li>
+                <li>Developing critical problem-solving and collaborative skills.</li>
+                <li>Gaining practical expertise by working on marketable and innovative projects.</li>
+                <li>
+                  A Masterclass series featuring insights from experts like Jensen Huang, Geoffrey Hinton, Andrew Ng, and others, ensuring access to highly relevant and engaging content.
+                </li>
+                <li>
+                  A Tools Masterclass, helping participants harness AI tools tailored for specific teams, enhancing productivity by up to 10X.
+                </li>
+                <li>Flexible remote-based learning, including video recordings for asynchronous learning.</li>
+              </ul>
+            </section>
 
-          {/* Section 5 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Collaboration and Community</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The program thrives on collaboration, encouraging participants to engage with mentors,
-              peers, and industry experts. Weekly discussions, virtual workshops, and team-based
-              projects foster an environment of shared learning and collective problem-solving.
-            </p>
-          </section>
+            {/* Section 4 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Discoveries That Define Our Time</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Advancements in AI and robotics have transformed industries like healthcare, transportation, and education. Examples include:
+              </p>
+              <ul className="list-disc list-inside space-y-4 text-gray-300">
+                <li>
+                  <strong>Autonomous Systems:</strong> From self-driving cars to robotic surgery, AI-driven automation is redefining how we work and live.
+                </li>
+                <li>
+                  <strong>AI-Powered Insights:</strong> Machine learning algorithms analyze vast datasets, uncovering trends and solving problems faster than ever.
+                </li>
+                <li>
+                  <strong>Entrepreneurial Innovation:</strong> Leveraging AI and robotics to create opportunities once unimaginable.
+                </li>
+              </ul>
+            </section>
 
-          {/* Section 6 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Connecting Education and Innovation</h2>
-            <p className="text-gray-300 leading-relaxed">
-              By integrating AI tools with practical, hands-on learning, Flomad Labs is creating a
-              pathway for students to contribute meaningfully to their chosen fields. As one mentor
-              described, “We’re not just teaching students how to use AI—we’re helping them discover
-              how to shape their industries with it.”
-            </p>
-          </section>
+            {/* Section 5 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Transformative Advancements Shaping Our World</h2>
+              <ul className="list-disc list-inside space-y-4 text-gray-300">
+                <li>
+                  <strong>Human-Centric Robotics:</strong> Designing robots that enhance productivity while improving quality of life.
+                </li>
+                <li>
+                  <strong>AI-Powered Creativity:</strong> Using machine intelligence to augment human ingenuity in arts, sciences, and business.
+                </li>
+                <li>
+                  <strong>Tech-Driven Startups:</strong> Developing scalable solutions to global challenges, from sustainability to healthcare.
+                </li>
+                <li>
+                  <strong>Cross-Disciplinary Breakthroughs:</strong> Combining AI, robotics, and entrepreneurship with other fields to innovate in unexpected ways.
+                </li>
+              </ul>
+            </section>
+
+            {/* Section 6 */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Join the Mission</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Flomad Labs R&D is more than an internship school—it’s a platform for immersive learning, fostering innovation, and achieving professional growth. Participants gain hands-on experience in every phase of a project’s lifecycle, from initial research to market launch.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                The future starts with a single bold step. Take yours at Flomad Labs R&D.
+              </p>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
     </Layout>
   );
 }
