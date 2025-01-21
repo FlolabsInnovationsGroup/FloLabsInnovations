@@ -29,16 +29,6 @@ export default function Hero() {
         >
           An AI and Robotics Research & Development Collective
         </p>
-
-        {/* Optional Call-to-Action */}
-        <div className="mt-8">
-          <a
-            href="#about"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition transform hover:scale-105"
-          >
-            Learn More
-          </a>
-        </div>
       </header>
     </section>
   );
