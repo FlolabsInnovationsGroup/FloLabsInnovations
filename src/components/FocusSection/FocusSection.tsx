@@ -41,17 +41,15 @@ export default function FocusSection() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {focuses.map((focus, index) => (
-
-<Card
-  key={index}
-  image={focus.image}
-  title={focus.title}
-  description={focus.description}
-  link={focus.link} // Pass the link here
-/>
-
+            <Card
+              key={index}
+              image={focus.image}
+              title={focus.title}
+              description={focus.description}
+              link={focus.link}
+            />
           ))}
         </div>
       </div>

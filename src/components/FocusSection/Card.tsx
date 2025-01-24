@@ -10,15 +10,14 @@ interface CardProps {
 
 export default function Card({ image, title, description, link }: CardProps) {
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-      {/* Image Section */}
-      <div className="relative w-full h-48">
+    <div className="bg-[#121212] text-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+      {/* Image Section with Aspect Ratio */}
+      <div className="aspect-w-4 aspect-h-3 relative overflow-hidden rounded-t-lg">
         <Image
-          src={image}
+          src={image || "/images/default-placeholder.png"} // Fallback for missing image
           alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="hover:scale-110 transition-transform duration-300"
+          fill // Fill the parent container
+          className="object-cover"
         />
       </div>
 
@@ -39,7 +38,7 @@ export default function Card({ image, title, description, link }: CardProps) {
           >
             <path
               fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.53-10.53a.75.75 0 10-1.06-1.06l-3.75 3.75a.75.75 0 000 1.06l3.75 3.75a.75.75 0 101.06-1.06L8.81 10l2.72-2.53z"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.53-10.53a.75.75 0 10-1.06-1.06l-3.75 3.75a.75.75 0 000 1.06l-3.75 3.75a.75.75 0 101.06-1.06L8.81 10l2.72-2.53z"
               clipRule="evenodd"
             />
           </svg>
@@ -48,7 +47,7 @@ export default function Card({ image, title, description, link }: CardProps) {
     </div>
   );
 
-  // Handle the link wrapping internally
+  // Handle wrapping with `Link` if `link` is provided
   return link ? (
     <Link href={link} className="block">
       {cardContent}

@@ -15,20 +15,19 @@ export default function TechnologyCard({
   link,
 }: TechnologyCardProps) {
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-      {/* Image Section */}
-      <div className="relative w-full h-48">
+    <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-xs mx-auto">
+      {/* Image Section with Aspect Ratio */}
+      <div className="relative aspect-w-4 aspect-h-3">
         <Image
-          src={image}
+          src={image || "/images/default-placeholder.png"} // Fallback image
           alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="hover:scale-110 transition-transform duration-300"
+          fill // Enables responsive sizing within the `relative` container
+          className="object-cover"
         />
       </div>
 
       {/* Content Section */}
-      <div className="p-6">
+      <div className="p-4">
         {/* Title */}
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         {/* Description */}

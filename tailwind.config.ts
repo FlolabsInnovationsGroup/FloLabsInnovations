@@ -7,9 +7,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'header-bg': "url('/images/headerbackground.png')",
+        "header-bg": "url('/images/headerbackground.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"), // Add the Aspect Ratio plugin
+  ],
 };
