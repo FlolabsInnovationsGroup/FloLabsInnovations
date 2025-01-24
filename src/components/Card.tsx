@@ -25,12 +25,11 @@ export default function Card({
       {/* Image Section */}
       <div className="overflow-hidden rounded-lg">
         <Image
-          src={image}
+          src={image || "/images/default-placeholder.png"} // Fallback image
           alt={title}
           width={400}
           height={300}
           className="w-full h-48 md:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-          onError={() => "/images/default-placeholder.png"} // Fallback for invalid images
         />
       </div>
 
@@ -42,13 +41,12 @@ export default function Card({
 
       {/* Button Section */}
       {buttonText && buttonLink && (
-        <Link href={buttonLink} passHref>
-          <a
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
-            aria-label={`Learn more about ${title}`}
-          >
-            {buttonText}
-          </a>
+        <Link
+          href={buttonLink}
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+          aria-label={`Learn more about ${title}`}
+        >
+          {buttonText}
         </Link>
       )}
     </div>

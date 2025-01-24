@@ -9,11 +9,7 @@ export default function BackButton() {
     <div className="mt-4">
       <button
         onClick={() => {
-          try {
-            router.push("/"); // Navigate to the homepage
-          } catch (error) {
-            console.error("Navigation error:", error);
-          }
+          router.push("/"); // Navigate to the homepage
         }}
         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition transform hover:scale-105 hover:shadow-md"
         aria-label="Go back to the homepage"

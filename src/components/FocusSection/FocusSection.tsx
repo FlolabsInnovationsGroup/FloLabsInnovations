@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Card from "../FocusSection/Card";
 
 export default function FocusSection() {
@@ -6,29 +5,25 @@ export default function FocusSection() {
     {
       image: "/images/education.png",
       title: "Education",
-      description:
-        "Revolutionizing learning through AI-powered educational tools and platforms.",
+      description: "Revolutionizing learning through AI-powered educational tools and platforms.",
       link: "/education",
     },
     {
       image: "/images/healthcare.png",
       title: "Healthcare",
-      description:
-        "Advancing medical research and patient care with cutting-edge AI.",
+      description: "Advancing medical research and patient care with cutting-edge AI.",
       link: "/healthcare",
     },
     {
       image: "/images/travel.png",
       title: "Travel",
-      description:
-        "Enhancing travel experiences with intelligent automation and personalization.",
+      description: "Enhancing travel experiences with intelligent automation and personalization.",
       link: "/travel",
     },
     {
       image: "/images/space.png",
       title: "Space",
-      description:
-        "Advancing space exploration and travel with AI-driven technologies and innovation.",
+      description: "Advancing space exploration and travel with AI-driven technologies and innovation.",
       link: "/space",
     },
   ];
@@ -42,31 +37,21 @@ export default function FocusSection() {
         </h2>
         {/* Section Subtitle */}
         <p className="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-12">
-          Pioneering breakthrough technologies that reshape industries and
-          elevate human potential.
+          Pioneering breakthrough technologies that reshape industries and elevate human potential.
         </p>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {focuses.map((focus, index) => (
-            <div key={index}>
-              {focus.link ? (
-                <Link href={focus.link}>
-                  <Card
-                    image={focus.image}
-                    title={focus.title}
-                    description={focus.description}
-                  />
-                </Link>
-              ) : (
-                <Card
-                  image={focus.image}
-                  title={focus.title}
-                  description={focus.description}
-                />
-              )}
-            </div>
-            ///comment to commit a change
+
+<Card
+  key={index}
+  image={focus.image}
+  title={focus.title}
+  description={focus.description}
+  link={focus.link} // Pass the link here
+/>
+
           ))}
         </div>
       </div>

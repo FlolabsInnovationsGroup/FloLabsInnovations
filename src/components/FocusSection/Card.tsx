@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   image: string; // URL for the card image
@@ -47,11 +48,11 @@ export default function Card({ image, title, description, link }: CardProps) {
     </div>
   );
 
-  // If the `link` prop is provided, wrap the card with a link
+  // Handle the link wrapping internally
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+    <Link href={link} className="block">
       {cardContent}
-    </a>
+    </Link>
   ) : (
     cardContent
   );

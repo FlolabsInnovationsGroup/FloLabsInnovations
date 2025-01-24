@@ -6,20 +6,19 @@ export default function AboutSection() {
       image: "/images/conversationalai.png",
       title: "Conversational AI",
       description: "Intelligent conversational AI for personalized travel planning.",
-      link: "https://www.flomadtravel.com/",
+      link: "https://www.flomadtravel.com/", // External link
     },
     {
       image: "/images/aiagirobotics.png",
       title: "AI/AGI/Robotics",
       description: "Empowering leaders to excel in AI and robotics through education.",
-      link: "https://flomad.international/",
+      link: "https://flomad.international/", // External link
     },
     {
       image: "/images/caipo.png",
       title: "Chief AI Productivity Officer",
-      description:
-        "A groundbreaking role to maximize productivity through AI-driven insights.",
-      link: "https://www.caipo.ai/",
+      description: "A groundbreaking role to maximize productivity through AI-driven insights.",
+      link: "https://www.caipo.ai/", // External link
     },
   ];
 
@@ -28,7 +27,7 @@ export default function AboutSection() {
       id="about"
       className="text-white py-16"
       style={{
-        backgroundImage: `url('/images/tunnelbackground.png')`, // Apply background image
+        backgroundImage: `url('/images/tunnelbackground.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

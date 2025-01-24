@@ -5,43 +5,37 @@ export default function Technologies() {
     {
       image: "/images/caipotech.png",
       title: "CAIPO",
-      description:
-        "Optimizing health and performance: personal and organizational growth.",
-        link: "/caipo",
+      description: "Optimizing health and performance: personal and organizational growth.",
+      link: "/caipo",
     },
     {
       image: "/images/transforming.png",
       title: "MoodChanger App for People",
-      description:
-        "Transforming your mood, one insight at a time with intelligent tools.",
+      description: "Transforming your mood, one insight at a time with intelligent tools.",
       link: "/moodchanger-people",
     },
     {
       image: "/images/forpets.png",
       title: "MoodChanger App for Pets",
-      description:
-        "Redefining pet wellness through AI and connection for better care.",
+      description: "Redefining pet wellness through AI and connection for better care.",
       link: "/moodchanger-pets",
     },
     {
       image: "/images/atravelonearth.png",
       title: "AI Travel on Earth and Beyond",
-      description:
-        "Conversational AI is changing the way we explore and travel the world.",
+      description: "Conversational AI is changing the way we explore and travel the world.",
       link: "/ai-travel",
     },
     {
       image: "/images/animalvocalpic.png",
       title: "Animal Vocalization",
-      description:
-        "AI-powered research in animal vocalization for a better understanding.",
+      description: "AI-powered research in animal vocalization for a better understanding.",
       link: "/animal-vocalization",
     },
     {
       image: "/images/aiandroboticspic.png",
       title: "AI and Robotics",
-      description:
-        "Advancing robotics through Flomad Labs R&D's cutting-edge technologies.",
+      description: "Advancing robotics through Flomad Labs R&D's cutting-edge technologies.",
       link: "/ai-robotics",
     },
   ];

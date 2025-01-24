@@ -11,6 +11,8 @@ export default function Hero() {
   return (
     <section
       className={`bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
+      role="banner" // Accessibility role for hero sections
+      aria-label="Flomad Labs R&D Hero Section"
     >
       {/* Content Wrapper */}
       <header className="text-center">
@@ -29,8 +31,6 @@ export default function Hero() {
         >
           An AI and Robotics Research & Development Collective
         </p>
-
-
       </header>
     </section>
   );

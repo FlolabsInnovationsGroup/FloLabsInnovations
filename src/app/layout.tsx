@@ -34,9 +34,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${robotoMono.variable} antialiased bg-gradient-to-b from-black via-[#121212] to-[#1e1e1e] text-white`}
       >
-        <Header /> {/* Add the Header component */}
-        <main>{children}</main> {/* Render the page-specific content */}
-        <Footer /> {/* Add the Footer component */}
+        {/* Global Header */}
+        <Header />
+
+        {/* Main content */}
+        <main>{children}</main>
+
+        {/* Global Footer */}
+        <Footer />
       </body>
     </html>
   );
