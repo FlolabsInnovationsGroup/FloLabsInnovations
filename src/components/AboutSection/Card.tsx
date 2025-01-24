@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   image: string; // Image URL
@@ -21,46 +22,48 @@ export default function Card({
 }: CardProps) {
   const cardContent = (
     <div
-      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out`}
+      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out max-w-xs mx-auto`}
     >
       {/* Image Section */}
-      <div className="overflow-hidden">
+      <div className="relative aspect-w-4 aspect-h-3 overflow-hidden rounded-t-lg">
         <Image
           src={image}
           alt={title}
-          width={400}
-          height={300}
-          className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
+          fill
+          className="object-cover"
         />
       </div>
 
       {/* Content Section */}
-      <div className="p-6">
+      <div className="p-4">
         {/* Title */}
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <h3 className="text-lg font-bold mb-2">{title}</h3>
         {/* Description */}
         <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
 
         {/* Optional Button */}
         {buttonText && buttonLink && (
-          <a
+          <Link
             href={buttonLink}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+            aria-label={`Learn more about ${title}`}
           >
             {buttonText}
-          </a>
+          </Link>
         )}
       </div>
     </div>
   );
 
-  // If `link` is provided, wrap the entire card with it
+  // If `link` is provided, wrap the entire card with `Link`
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+    <Link
+      href={link}
+      className="block"
+      aria-label={`View details about ${title}`}
+    >
       {cardContent}
-    </a>
+    </Link>
   ) : (
     cardContent
   );
