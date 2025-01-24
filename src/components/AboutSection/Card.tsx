@@ -5,9 +5,9 @@ interface CardProps {
   title: string; // Card title
   description: string; // Card description
   bgColor?: string; // Optional background color
+  link?: string; // Optional link for the entire card
   buttonText?: string; // Optional button text
   buttonLink?: string; // Optional button link
-  link?: string; // Optional link for the entire card
 }
 
 export default function Card({
@@ -15,24 +15,21 @@ export default function Card({
   title,
   description,
   bgColor = "bg-[#121212]",
+  link,
   buttonText,
   buttonLink,
-  link,
 }: CardProps) {
-  return (
-    <a
-      href={link || buttonLink || "#"}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out block`}
+  const cardContent = (
+    <div
+      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out`}
     >
       {/* Image Section */}
       <div className="overflow-hidden">
         <Image
           src={image}
           alt={title}
-          width={400} // Replace with actual dimensions
-          height={300} // Replace with actual dimensions
+          width={400}
+          height={300}
           className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
         />
       </div>
@@ -43,20 +40,28 @@ export default function Card({
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         {/* Description */}
         <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
+
         {/* Optional Button */}
         {buttonText && buttonLink && (
-          <div className="mt-4">
-            <a
-              href={buttonLink}
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {buttonText}
-            </a>
-          </div>
+          <a
+            href={buttonLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+          >
+            {buttonText}
+          </a>
         )}
       </div>
+    </div>
+  );
+
+  // If `link` is provided, wrap the entire card with it
+  return link ? (
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+      {cardContent}
     </a>
+  ) : (
+    cardContent
   );
 }

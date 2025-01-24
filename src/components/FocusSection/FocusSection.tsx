@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Card from "../FocusSection/Card";
 
 export default function FocusSection() {
@@ -49,23 +48,13 @@ export default function FocusSection() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {focuses.map((focus, index) => (
-            <div key={index}>
-              {focus.link ? (
-                <Link href={focus.link}>
-                  <Card
-                    image={focus.image}
-                    title={focus.title}
-                    description={focus.description}
-                  />
-                </Link>
-              ) : (
-                <Card
-                  image={focus.image}
-                  title={focus.title}
-                  description={focus.description}
-                />
-              )}
-            </div>
+            <Card
+              key={index}
+              image={focus.image}
+              title={focus.title}
+              description={focus.description}
+              link={focus.link} // Pass the link here
+            />
           ))}
         </div>
       </div>

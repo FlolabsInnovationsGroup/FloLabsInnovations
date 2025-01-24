@@ -115,6 +115,7 @@ export default function Footer() {
                 border: "2px solid #e5e7eb",
                 backgroundColor: "transparent",
               }}
+              aria-label="Subscribe to our newsletter"
             ></iframe>
           </div>
         </div>
