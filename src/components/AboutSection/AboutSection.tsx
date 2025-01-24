@@ -17,7 +17,7 @@ export default function AboutSection() {
     {
       image: "/images/caipo.png",
       title: "Chief AI Productivity Officer",
-      description: "A groundbreaking role to maximize productivity through AI-driven insights.",
+      description: "Maximizing productivity through AI-driven insights.",
       link: "https://www.caipo.ai/", // External link
     },
   ];

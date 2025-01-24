@@ -15,9 +15,9 @@ export default function TechnologyCard({
   link,
 }: TechnologyCardProps) {
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-xs mx-auto">
+    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300">
       {/* Image Section with Aspect Ratio */}
-      <div className="relative aspect-w-4 aspect-h-3">
+      <div className="relative aspect-w-4 aspect-h-3 overflow-hidden rounded-t-lg">
         <Image
           src={image || "/images/default-placeholder.png"} // Fallback image
           alt={title}
@@ -54,10 +54,18 @@ export default function TechnologyCard({
 
   // If `link` is provided, wrap the card content with a `Link` component
   return link ? (
-    <Link href={link} className="block">
-      {cardContent}
+    <Link
+      href={link}
+      className="block group"
+      aria-label={`View details about ${title}`}
+    >
+      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300">
+        <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+      </div>
     </Link>
   ) : (
-    cardContent
+    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300">
+      <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+    </div>
   );
 }
