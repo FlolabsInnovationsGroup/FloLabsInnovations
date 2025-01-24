@@ -22,7 +22,7 @@ export default function Card({
 }: CardProps) {
   const cardContent = (
     <div
-      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out max-w-xs mx-auto`}
+      className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 ease-in-out`}
     >
       {/* Image Section */}
       <div className="relative aspect-w-4 aspect-h-3 overflow-hidden rounded-t-lg">
@@ -59,12 +59,16 @@ export default function Card({
   return link ? (
     <Link
       href={link}
-      className="block"
+      className="block group"
       aria-label={`View details about ${title}`}
     >
-      {cardContent}
+      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300">
+        <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+      </div>
     </Link>
   ) : (
-    cardContent
+    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300">
+      <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+    </div>
   );
 }
