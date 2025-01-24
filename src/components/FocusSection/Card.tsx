@@ -27,20 +27,18 @@ export default function Card({ image, title, description, link }: CardProps) {
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         {/* Description */}
         <p className="text-sm text-gray-400 mb-4">{description}</p>
-        {/* Read More Icon */}
-        <div className="text-blue-400 flex items-center">
-          <span className="text-sm">Read More</span>
+        {/* Read More Button */}
+        <div className="flex justify-end items-center mt-4">
+          <span className="text-sm font-medium text-blue-400 group-hover:underline">
+            Read More
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 ml-1"
-            viewBox="0 0 20 20"
+            className="h-5 w-5 ml-2 text-blue-400 group-hover:translate-x-1 transition-transform duration-300"
+            viewBox="0 0 24 24"
             fill="currentColor"
           >
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.53-10.53a.75.75 0 10-1.06-1.06l-3.75 3.75a.75.75 0 000 1.06l-3.75 3.75a.75.75 0 101.06-1.06L8.81 10l2.72-2.53z"
-              clipRule="evenodd"
-            />
+            <path d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>

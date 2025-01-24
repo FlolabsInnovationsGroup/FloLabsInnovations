@@ -26,7 +26,7 @@ export default function Footer() {
                 <FaPhoneAlt className="w-6 h-6" />
               </a>
               <a
-                href="https://www.linkedin.com/company/flomadlabs"
+                href="https://www.linkedin.com/company/flomad-labs-r-d/"
                 className="hover:text-blue-400 transition duration-300"
                 aria-label="LinkedIn"
                 target="_blank"
