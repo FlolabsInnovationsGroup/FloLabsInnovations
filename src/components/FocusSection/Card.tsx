@@ -48,7 +48,7 @@ export default function Card({ image, title, description, link }: CardProps) {
     </div>
   );
 
-  // If `link` is provided, wrap the card content with a `Link` component
+  // Handle the link wrapping internally
   return link ? (
     <Link href={link} className="block">
       {cardContent}
