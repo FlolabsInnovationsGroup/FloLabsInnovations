@@ -11,8 +11,6 @@ export default function Header() {
   // Debug log for the current route
   console.log("Current Pathname:", pathname);
 
-  // Check if the current route is the homepage
-  const isHomepage = pathname === "/";
 
   return (
     <header className="fixed w-full z-50 text-white bg-black py-6">
