@@ -10,14 +10,14 @@ export default function Technologies() {
     },
     {
       image: "/images/transforming.png",
-      title: "MoodChanger App for People",
-      description: "Transforming your mood, one insight at a time with intelligent tools.",
+      title: "MoodChanger for People",
+      description: "Transforming your mood and health, one insight at a time.",
       link: "/moodchanger-people",
     },
     {
       image: "/images/forpets.png",
-      title: "MoodChanger App for Pets",
-      description: "Redefining pet wellness through AI and connection for better care.",
+      title: "MoodChanger for Pets",
+      description: "Redefining pet wellness for better care.",
       link: "/moodchanger-pets",
     },
     {
@@ -29,13 +29,13 @@ export default function Technologies() {
     {
       image: "/images/animalvocalpic.png",
       title: "Animal Vocalization",
-      description: "AI-powered research in animal vocalization for a better understanding.",
+      description: "Talking to your pets is about to become reality.",
       link: "/animal-vocalization",
     },
     {
       image: "/images/aiandroboticspic.png",
       title: "AI and Robotics",
-      description: "Advancing robotics through Flomad Labs R&D's cutting-edge technologies.",
+      description: "We are on the cusp of a revolution.",
       link: "/ai-robotics",
     },
   ];
