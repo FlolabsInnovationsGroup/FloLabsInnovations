@@ -27,7 +27,7 @@ export default function SpacePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 A Universe of Possibilities Awaits
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Space has always captured the imagination of humanity, representing the ultimate challenge and opportunity. At Flomad Labs R&D, we believe the future belongs to those who dare to explore, innovate, and build. With advancements in AI, robotics, and entrepreneurial thinking, the possibilities for transforming humanity’s relationship with space are limitless.
               </p>
             </section>
@@ -37,7 +37,7 @@ export default function SpacePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Fuel Your Journey of Discovery
               </h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Whether you’re a student, career changer, or lifelong learner, Flomad Labs R&D is your gateway to the next frontier. Our programs empower you to embrace cutting-edge technology, foster creativity, and develop the skills necessary to tackle the world’s most complex challenges. Together, we’ll explore the unknown, solve problems, and inspire the next wave of innovation.
               </p>
             </section>
@@ -45,7 +45,7 @@ export default function SpacePage() {
             {/* Section 3 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Why Space?</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Space exploration drives advancements in AI, robotics, and technology that impact industries far beyond the cosmos. The growing commercial space industry offers unique opportunities for visionaries ready to take bold steps. Engaging with space-related challenges cultivates critical thinking, problem-solving, and the courage to innovate.
               </p>
             </section>
@@ -55,10 +55,10 @@ export default function SpacePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Discoveries That Define Our Era
               </h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Scientists recently discovered that the universe is not only expanding but accelerating, driven by the mysterious force of dark energy. Thousands of exoplanets have been identified, with some in the habitable zone, sparking the possibility of discovering extraterrestrial life or future human colonies.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Advancements in AI are enabling us to decode animal vocalizations, unlocking the ability to understand and translate the complex communication systems of other species. These breakthroughs have profound parallels with space exploration, where we aim to interpret the messages carried by light, particles, magnetic waves, and other forms of cosmic communication.
               </p>
             </section>
@@ -68,7 +68,7 @@ export default function SpacePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Future Possibilities on the Horizon
               </h2>
-              <ul className="list-disc list-inside text-gray-300 space-y-4">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   Space colonization is closer than ever, with permanent habitats
                   on the Moon and Mars offering opportunities for human life
@@ -90,18 +90,18 @@ export default function SpacePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Opportunities Across Sectors
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 <strong>Education:</strong> Recent discoveries inspire the
                 integration of space science into educational programs, sparking
                 interest in STEM fields and cultivating the next generation of
                 space innovators.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 <strong>Travel and Hospitality:</strong> Space tourism is becoming
                 a reality, with companies like SpaceX and Blue Origin pioneering
                 commercial spaceflights.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 <strong>Healthcare:</strong> Space research conducted in
                 microgravity environments has led to groundbreaking medical
                 advancements, including insights into osteoporosis and cancer
@@ -112,7 +112,7 @@ export default function SpacePage() {
             {/* Section 7 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Join the Mission</h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Flomad Labs R&D is more than a learning experience—it’s a
                 launchpad for your potential. By joining us, you’ll become part of
                 a community united by a shared vision to push the boundaries of
@@ -125,4 +125,3 @@ export default function SpacePage() {
       </MainLayout>
     );
   }
-  

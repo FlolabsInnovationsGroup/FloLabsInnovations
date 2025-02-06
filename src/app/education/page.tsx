@@ -20,7 +20,7 @@ export default function EducationPage() {
             {/* Section 1 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">A World of Innovation Awaits</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 The future is being shaped by advancements in AI, robotics, and entrepreneurial innovation. 
                 At Flomad Labs R&D, we equip students, career changers, and lifelong learners with the skills, tools, 
                 and experiences necessary to thrive in this transformative era. By engaging in real-world projects, 
@@ -31,17 +31,17 @@ export default function EducationPage() {
             {/* Section 2 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Fuel Your Journey of Discovery</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Our internship program is more than a learning experience—it’s a solution to the challenges many face 
                 when seeking meaningful internships and career opportunities.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Participants are immersed in real-world projects, collaborating in teams to explore the possibilities 
                 of AI, robotics, and entrepreneurship. Through this process, they acquire practical experience in ideation, 
                 research, development, and product evolution. The program prepares learners to tackle challenges, develop solutions, 
                 and achieve meaningful career growth.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 With flexible, remote options, our program ensures accessibility to learners worldwide, fostering collaboration across diverse cultures and backgrounds.
               </p>
             </section>
@@ -49,7 +49,7 @@ export default function EducationPage() {
             {/* Section 3 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Why AI, Robotics, and Entrepreneurship?</h2>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Mastering the latest tools and technologies:</strong> Through immersive learning experiences.
                 </li>
@@ -68,10 +68,10 @@ export default function EducationPage() {
             {/* Section 4 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Discoveries That Define Our Time</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Advancements in AI and robotics have already transformed the world, enabling breakthroughs in areas such as healthcare, transportation, and education.
               </p>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Autonomous Systems:</strong> From self-driving cars to robotic surgery, AI-driven automation is redefining how we work and live.
                 </li>
@@ -87,7 +87,7 @@ export default function EducationPage() {
             {/* Section 5 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Transformative Advancements Shaping Our World</h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Human-centric robotics, AI-powered creativity, and tech-driven startups are reshaping industries globally. Participants at Flomad Labs engage directly 
                 with these cutting-edge developments, preparing themselves to excel in these rapidly growing and evolving fields.
               </p>
@@ -96,10 +96,10 @@ export default function EducationPage() {
             {/* Section 6 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Join the Mission</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs R&D is more than an internship school—it’s a platform for immersive learning, fostering innovation, and achieving professional growth. Participants gain hands-on experience in every phase of a project’s lifecycle, from initial research to market launch.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 By working in collaborative teams, they build the skills and confidence to excel in their careers and contribute to shaping the industries of the future. 
                 The future starts with a single bold step. Take yours at Flomad Labs R&D.
               </p>

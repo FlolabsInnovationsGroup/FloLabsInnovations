@@ -22,10 +22,10 @@ export default function AnimalVocalizationPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 The Inspiration Behind the Project
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 We’re inspired by groundbreaking research happening right now. The Earth Species Project (ESP) is developing AI to decode communication across species. Project CETI (Cetacean Translation Initiative) is focused on deciphering the intricate sounds of sperm whales. Zoolingua is paving the way for understanding canine communication by analyzing vocalizations and body language.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Building on these advances, Flomad is narrowing our focus to cats and dogs. These animals express a wide range of emotions and needs through vocal patterns, yet their messages are often misunderstood. By leveraging cutting-edge AI and acoustic analysis, we aim to help people better understand the unique ways their pets communicate.
               </p>
             </section>
@@ -33,10 +33,10 @@ export default function AnimalVocalizationPage() {
             {/* Section 2 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">What the Research Tells Us</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Recent studies have shown that dogs’ barks vary based on their emotions and intentions—whether they’re hungry, excited, or alerting us to danger. Cats, too, have a diverse “vocabulary” of meows and purrs, with subtle changes in tone and frequency that reflect their feelings or needs. While tools like the “MeowTalk” app have made strides in translating cat vocalizations, there’s still so much more to uncover.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Building on these advances, Flomad is narrowing our focus to cats and dogs. These animals express a wide range of emotions and needs through vocal patterns, yet their messages are often misunderstood. By leveraging cutting-edge AI and acoustic analysis, we aim to help people better understand the unique ways their pets communicate.
               </p>
             </section>
@@ -44,7 +44,7 @@ export default function AnimalVocalizationPage() {
             {/* Section 3 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Flomad’s Approach Using AI</h2>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Understanding Emotional Cues:</strong> Distinguish between barks or meows of excitement, fear, or distress.
                 </li>
@@ -60,7 +60,7 @@ export default function AnimalVocalizationPage() {
             {/* Section 4 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Practical Applications</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Imagine knowing exactly what your dog’s bark means—whether it’s a playful invitation or a sign of unease. Or being able to tell when your cat’s meow indicates hunger, curiosity, or a desire for affection. These tools can make life easier for pet owners and enhance the well-being of their furry friends.
               </p>
             </section>
@@ -68,10 +68,10 @@ export default function AnimalVocalizationPage() {
             {/* Section 5 */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Looking Ahead</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 The field of animal communication is still in its early stages, but its potential is immense. At Flomad, we’re excited to contribute to this growing body of knowledge. With every bark, meow, and purr we analyze, we’re building a future where humans and their pets understand each other in deeper, more meaningful ways.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 By working alongside other innovative projects like ESP, CETI, and Zoolingua, we aim to push the boundaries of what’s possible. Join us as we explore the unique voices of cats and dogs and uncover the secrets behind their sounds. Together, we’re breaking barriers and strengthening bonds—one bark and meow at a time.
               </p>
             </section>
@@ -80,5 +80,4 @@ export default function AnimalVocalizationPage() {
       </div>
       </MainLayout>
     );
-  }
-  
+}
