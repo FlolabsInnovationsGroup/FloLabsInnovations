@@ -10,7 +10,7 @@ export default function HealthcarePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
               Smarter Healthcare: Flomad Labs’ Vision
             </h1>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-lg text-gray-400 leading-relaxed mb-4">
               Flomad Labs R&D is at the forefront of reimagining healthcare
               through the integration of advanced artificial intelligence,
               wearable technology, and data-driven insights. With a commitment to
@@ -34,12 +34,12 @@ export default function HealthcarePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 A Holistic Approach to Healthcare Innovation
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs’ healthcare initiatives are built on the principles
                 of collaboration, personalization, and accessibility. The
                 company’s efforts extend across key areas, including:
               </p>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>AI-Driven Diagnostics:</strong> Enhancing the speed and
                   accuracy of medical diagnoses through artificial intelligence,
@@ -61,9 +61,9 @@ export default function HealthcarePage() {
                   and patient data.
                 </li>
                 <li>
-                  <strong>Streamlining Administrative Workflows:</strong>{' '}
-                  Automating tasks like scheduling and documentation to reduce
-                  healthcare provider burdens.
+                  <strong>Streamlining Administrative Workflows:</strong> Automating
+                  tasks like scheduling and documentation to reduce healthcare
+                  provider burdens.
                 </li>
               </ul>
             </section>
@@ -73,7 +73,7 @@ export default function HealthcarePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Addressing Key Challenges in Healthcare
               </h2>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Rising Healthcare Costs:</strong> Utilizing AI and
                   automation to reduce inefficiencies and operational costs.
@@ -99,13 +99,13 @@ export default function HealthcarePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Collaboration Across the Industry
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs recognizes that innovation in healthcare is a
                 collaborative effort. The company is actively partnering with
                 hospitals, research institutions, and healthcare providers to
                 develop solutions that meet real-world needs.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Additionally, Flomad Labs is committed to fostering a culture of
                 shared knowledge and innovation. By working closely with the
                 healthcare community, the company ensures its technologies align
@@ -118,13 +118,13 @@ export default function HealthcarePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Collaboration and Community
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 The program thrives on collaboration, encouraging participants to
                 engage with mentors, peers, and industry experts. Weekly
                 discussions, virtual workshops, and team-based projects foster an
                 environment of shared learning and collective problem-solving.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 This collaborative spirit is further enhanced by the program’s
                 global reach. Students from a wide range of cultural and academic
                 backgrounds come together, enriching the experience with diverse
@@ -137,20 +137,20 @@ export default function HealthcarePage() {
               <h2 className="text-2xl font-semibold mb-4">
                 A Future of Better Health
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs R&D is not just developing technology—it is reshaping
                 the way healthcare is delivered and experienced. With a focus on
                 innovation, patient-centric solutions, and collaboration, the
                 company is setting the stage for a future where healthcare is
                 more efficient, effective, and accessible to all.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 As one company representative explains, “Healthcare is personal,
                 and it should be treated that way. Our mission is to create tools
                 and technologies that empower patients and providers alike,
                 fostering better outcomes and a healthier future.”
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 For Flomad Labs, the journey toward transforming healthcare is
                 guided by a commitment to addressing today’s challenges while
                 building solutions that will define the healthcare landscape for
@@ -162,5 +162,4 @@ export default function HealthcarePage() {
       </div>
       </MainLayout>
     );
-  }
-  
+}

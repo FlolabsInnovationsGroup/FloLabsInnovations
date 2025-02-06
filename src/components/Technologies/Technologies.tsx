@@ -27,7 +27,7 @@ export default function Technologies() {
       link: "/ai-travel",
     },
     {
-      image: "/images/animalvocalpic.png",
+      image: "/images/animalvocalization.png",
       title: "Animal Vocalization",
       description: "Talking to your pets is about to become reality.",
       link: "/animal-vocalization",

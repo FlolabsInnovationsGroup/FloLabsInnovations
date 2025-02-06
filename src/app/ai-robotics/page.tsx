@@ -1,6 +1,5 @@
 import MainLayout from "../../components/MainLayout";
 
-
 export default function AIAndRoboticsPage() {
     return (
       <MainLayout>
@@ -31,10 +30,10 @@ export default function AIAndRoboticsPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Intelligent Robotics for Everyday Impact
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs R&D’s work in robotics focuses on several key areas:
               </p>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Autonomous Systems:</strong> Designing machines that can navigate environments, make
                   decisions, and perform tasks independently, from warehouse operations to self-driving vehicles.
@@ -59,7 +58,7 @@ export default function AIAndRoboticsPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Research and Development
               </h2>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Machine Learning:</strong> Developing AI systems that allow robots to learn from experience,
                   adapt to new tasks, and continually improve.
@@ -80,7 +79,7 @@ export default function AIAndRoboticsPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Applications Across Industries
               </h2>
-              <ul className="list-disc list-inside space-y-4 text-gray-300">
+              <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                   <strong>Healthcare:</strong> Robots assist in surgeries, patient care, and rehabilitation,
                   offering precision and support in critical settings.
@@ -105,7 +104,7 @@ export default function AIAndRoboticsPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 Collaboration for Progress
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs R&D works closely with universities, technology companies, and industry partners
                 to drive progress in robotics. These collaborations ensure that developments are aligned with
                 practical needs while advancing the robotics field as a whole.
@@ -117,17 +116,17 @@ export default function AIAndRoboticsPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 A Future with Intelligent Machines
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 Flomad Labs envisions a future where intelligent machines complement human capabilities,
                 enhancing efficiency, safety, and innovation. By focusing on research-driven solutions, the company
                 is paving the way for robotics to be seamlessly integrated into everyday life.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 “Our goal is to design robotics systems that work alongside humans, solving problems and opening
                 new possibilities,” says a representative from Flomad Labs. “With intelligent robotics, we’re building
                 tools that empower individuals and industries alike.”
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-400 leading-relaxed">
                 Through its focus on adaptability, collaboration, and user-centered design, Flomad Labs R&D is setting
                 a new standard for robotics, ensuring these technologies are built to support and enhance the world
                 around us.
@@ -138,5 +137,4 @@ export default function AIAndRoboticsPage() {
       </div>
       </MainLayout>
     );
-  }
-  
+}
