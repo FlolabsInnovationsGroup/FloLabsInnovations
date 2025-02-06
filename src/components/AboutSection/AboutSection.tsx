@@ -4,20 +4,20 @@ export default function AboutSection() {
   const projects = [
     {
       image: "/images/conversationalai.png",
-      title: "Conversational AI",
-      description: "Intelligent conversational AI for personalized travel planning.",
+      title: "Travel AI",
+      description: "Conversational AI for personalized trip planning.",
       link: "https://www.flomadtravel.com/", // External link
     },
     {
       image: "/images/aiagirobotics.png",
-      title: "AI/AGI/Robotics",
-      description: "Empowering leaders to excel in AI and robotics through education.",
+      title: "Advanced AI & Robotics Enterpreneurship Edu",
+      description: "Empowering learners to excel through experiential learning.",
       link: "https://flomad.international/", // External link
     },
     {
       image: "/images/caipo.png",
-      title: "Chief AI Productivity Officer",
-      description: "Maximizing productivity through AI-driven insights.",
+      title: "Chief AI Productivity Officer (CAIPO)",
+      description: "Optimizing lifestyles through AI driven IoT technologies.",
       link: "https://www.caipo.ai/", // External link
     },
   ];
