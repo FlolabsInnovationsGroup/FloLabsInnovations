@@ -22,8 +22,46 @@ export default function AnimalVocalizationPage() {
               <h2 className="text-2xl font-semibold mb-4">
                 The Inspiration Behind the Project
               </h2>
+              <div className="flex justify-center items-center space-x-16 mb-6">
+                <a
+                  href="https://www.earthspecies.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Earth Species Project (ESP)"
+                >
+                  <img
+                    src="/images/esp.png"
+                    alt="ESP Logo"
+                    className="w-40 h-40 object-contain"
+                  />
+                </a>
+                <a
+                  href="https://www.projectceti.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Project CETI"
+                >
+                  <img
+                    src="/images/ceti.png"
+                    alt="CETI Logo"
+                    className="w-40 h-40 object-contain"
+                  />
+                </a>
+                <a
+                  href="https://www.zoolingua.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Zoolingua"
+                >
+                  <img
+                    src="/images/zoolinga.png"
+                    alt="Zoolingua Logo"
+                    className="w-40 h-40 object-contain"
+                  />
+                </a>
+              </div>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                We’re inspired by groundbreaking research happening right now. The Earth Species Project (ESP) is developing AI to decode communication across species. Project CETI (Cetacean Translation Initiative) is focused on deciphering the intricate sounds of sperm whales. Zoolingua is paving the way for understanding canine communication by analyzing vocalizations and body language.
+                We’re inspired by groundbreaking research happening right now. The <a href="https://www.earthspecies.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Earth Species Project (ESP)</a> is developing AI to decode communication across species. <a href="https://www.projectceti.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Project CETI (Cetacean Translation Initiative)</a> is focused on deciphering the intricate sounds of sperm whales. <a href="https://www.zoolingua.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Zoolingua</a> is paving the way for understanding canine communication by analyzing vocalizations and body language.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
                 Building on these advances, Flomad is narrowing our focus to cats and dogs. These animals express a wide range of emotions and needs through vocal patterns, yet their messages are often misunderstood. By leveraging cutting-edge AI and acoustic analysis, we aim to help people better understand the unique ways their pets communicate.
@@ -72,7 +110,7 @@ export default function AnimalVocalizationPage() {
                 The field of animal communication is still in its early stages, but its potential is immense. At Flomad, we’re excited to contribute to this growing body of knowledge. With every bark, meow, and purr we analyze, we’re building a future where humans and their pets understand each other in deeper, more meaningful ways.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                By working alongside other innovative projects like ESP, CETI, and Zoolingua, we aim to push the boundaries of what’s possible. Join us as we explore the unique voices of cats and dogs and uncover the secrets behind their sounds. Together, we’re breaking barriers and strengthening bonds—one bark and meow at a time.
+                By working alongside other innovative projects like <a href="https://www.earthspecies.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">ESP</a>, <a href="https://www.projectceti.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">CETI</a>, and <a href="https://www.zoolingua.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Zoolingua</a>, we aim to push the boundaries of what’s possible. Join us as we explore the unique voices of cats and dogs and uncover the secrets behind their sounds. Together, we’re breaking barriers and strengthening bonds—one bark and meow at a time.
               </p>
             </section>
           </div>
