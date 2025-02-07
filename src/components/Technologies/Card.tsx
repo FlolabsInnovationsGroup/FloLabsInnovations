@@ -15,7 +15,7 @@ export default function TechnologyCard({
   link,
 }: TechnologyCardProps) {
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300">
+    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 flex flex-col h-full">
       {/* Image Section with Aspect Ratio */}
       <div className="relative aspect-w-4 aspect-h-3 overflow-hidden rounded-t-lg">
         <Image
@@ -27,13 +27,13 @@ export default function TechnologyCard({
       </div>
 
       {/* Content Section */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
         {/* Title */}
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         {/* Description */}
-        <p className="text-sm text-gray-400 mb-4">{description}</p>
+        <p className="text-sm text-gray-400 mb-4 line-clamp-3">{description}</p>
         {/* Read More Button */}
-        <div className="flex justify-end items-center mt-4">
+        <div className="mt-auto flex justify-end items-center">
           <span className="text-sm font-medium text-blue-400 group-hover:underline">
             Read More
           </span>
@@ -54,16 +54,16 @@ export default function TechnologyCard({
   return link ? (
     <Link
       href={link}
-      className="block group"
+      className="block group h-full"
       aria-label={`View details about ${title}`}
     >
-      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300">
-        <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300 h-full">
+        <div className="bg-[#121212] rounded-lg h-full">{cardContent}</div>
       </div>
     </Link>
   ) : (
-    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300">
-      <div className="bg-[#121212] rounded-lg">{cardContent}</div>
+    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 h-full">
+      <div className="bg-[#121212] rounded-lg h-full">{cardContent}</div>
     </div>
   );
 }
