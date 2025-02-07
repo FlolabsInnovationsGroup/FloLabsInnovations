@@ -23,7 +23,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section
+    <section id="about"
       className="relative text-white py-32 flex items-center justify-center"
       style={{
         backgroundImage: `url('/images/tunnelbackground.png')`,
