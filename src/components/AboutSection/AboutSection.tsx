@@ -24,26 +24,19 @@ export default function AboutSection() {
 
   return (
     <section
-      className="text-white py-48" // Extended vertical padding for a longer section
+      className="relative text-white py-32 flex items-center justify-center"
       style={{
         backgroundImage: `url('/images/tunnelbackground.png')`,
-        backgroundSize: "70%", // Zoomed out further to show more of the tunnel
-        backgroundPosition: "center", // Centering the tunnel image
+        backgroundSize: "80%", // Zoom out to show more of the tunnel
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
       }}
     >
-      <div className="container mx-auto px-10 lg:px-20 bg-black bg-opacity-60 rounded-xl py-28">
-        {/* Section Title */}
-        <h2 className="text-5xl font-extrabold text-center mb-16">
-          About Us
-        </h2>
-        {/* Section Subtitle */}
-        <p className="text-lg text-center text-gray-300 max-w-4xl mx-auto mb-16">
-          See our ongoing research and development projects.
-        </p>
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* Overlay */}
+      <div className="container mx-auto relative z-10 px-6">
+        <h2 className="text-5xl font-bold text-center mb-12">About Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
           {projects.map((project, index) => (
             <Card
               key={index}
