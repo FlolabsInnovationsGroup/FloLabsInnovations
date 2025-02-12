@@ -40,10 +40,14 @@ export default function AboutSection() {
         minHeight: "100vh",
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay */}
       <div className="container mx-auto px-6 lg:px-12">
 
-        <h2 className="text-5xl font-bold text-center mb-12">About Us</h2>
+      <h2 className="text-5xl font-bold text-center mb-12 text-white !text-white drop-shadow-lg">
+  About Us
+</h2>
+
+
         
         {/* Updated Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
