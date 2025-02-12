@@ -52,15 +52,16 @@ export default function Technologies() {
         </p>
 
         {/* Grid of Technology Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
           {technologies.map((tech, index) => (
-            <TechnologyCard
-              key={index}
-              image={tech.image}
-              title={tech.title}
-              description={tech.description}
-              link={tech.link}
-            />
+            <div key={index} className="w-full max-w-[350px]">
+              <TechnologyCard
+                image={tech.image}
+                title={tech.title}
+                description={tech.description}
+                link={tech.link}
+              />
+            </div>
           ))}
         </div>
       </div>

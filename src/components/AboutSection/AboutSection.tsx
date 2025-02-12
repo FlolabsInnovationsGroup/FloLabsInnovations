@@ -20,10 +20,17 @@ export default function AboutSection() {
       description: "Optimizing lifestyles through AI-driven IoT technologies.",
       link: "https://www.caipo.ai/",
     },
+    {
+      image: "/images/robocollective.png",
+      title: "RoboCollective",
+      description: "Your very own robot dealership franchise.",
+      link: "https://www.robocollective.ai/",
+    },
   ];
 
   return (
-    <section id="about"
+    <section
+      id="about"
       className="relative text-white py-32 flex items-center justify-center"
       style={{
         backgroundImage: `url('/images/tunnelbackground.png')`,
@@ -34,17 +41,21 @@ export default function AboutSection() {
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* Overlay */}
-      <div className="container mx-auto relative z-10 px-6">
+      <div className="container mx-auto px-6 lg:px-12">
+
         <h2 className="text-5xl font-bold text-center mb-12">About Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+        
+        {/* Updated Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
           {projects.map((project, index) => (
-            <Card
-              key={index}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-            />
+            <div key={index} className="w-full max-w-[350px]">
+              <Card
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+              />
+            </div>
           ))}
         </div>
       </div>
