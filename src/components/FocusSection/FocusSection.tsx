@@ -32,7 +32,7 @@ export default function FocusSection() {
     <section id="focus" className="bg-black text-white py-16">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
           Our Focus
         </h2>
         {/* Section Subtitle */}
