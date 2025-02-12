@@ -44,7 +44,7 @@ export default function Technologies() {
     <section id="technologies" className="bg-black text-white py-16">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
           Technologies
         </h2>
         <p className="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-12">
