@@ -1,4 +1,4 @@
-import Card from "../AboutSection/Card"; // Adjust path as needed
+import Card from "../AboutSection/Card"; 
 
 export default function AboutSection() {
   const projects = [
@@ -7,24 +7,32 @@ export default function AboutSection() {
       title: "Travel AI",
       description: "Conversational AI for personalized trip planning.",
       link: "https://www.flomadtravel.com/",
+      buttonText: "Visit Site",
+      buttonLink: "https://www.flomadtravel.com/",
     },
     {
       image: "/images/aiagirobotics.png",
       title: "Advanced AI & Robotics Education",
       description: "Empowering learners through experiential learning.",
       link: "https://flomad.international/",
+      buttonText: "Visit Site",
+      buttonLink: "https://flomad.international/",
     },
     {
       image: "/images/caipo.png",
       title: "Chief AI Productivity Officer (CAIPO)",
       description: "Optimizing lifestyles through AI-driven IoT technologies.",
       link: "https://www.caipo.ai/",
+      buttonText: "Visit Site",
+      buttonLink: "https://www.caipo.ai/",
     },
     {
       image: "/images/robocollective.png",
       title: "RoboCollective",
       description: "Your very own robot dealership franchise.",
       link: "https://www.robocollective.ai/",
+      buttonText: "Visit Site",
+      buttonLink: "https://www.robocollective.ai/",
     },
   ];
 
@@ -43,12 +51,10 @@ export default function AboutSection() {
       <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay */}
       <div className="container mx-auto px-6 lg:px-12">
 
-      <h2 className="text-5xl font-bold text-center mb-12 text-white !text-white drop-shadow-lg">
-  About Us
-</h2>
+        <h2 className="text-5xl font-bold text-center mb-12 text-white drop-shadow-lg">
+          About Us
+        </h2>
 
-
-        
         {/* Updated Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
           {projects.map((project, index) => (
@@ -58,6 +64,8 @@ export default function AboutSection() {
                 title={project.title}
                 description={project.description}
                 link={project.link}
+                buttonText={project.buttonText} 
+                buttonLink={project.buttonLink} 
               />
             </div>
           ))}

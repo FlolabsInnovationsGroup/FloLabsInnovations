@@ -6,24 +6,20 @@ import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname(); // Get the current path
-
-  // Debug log for the current route
-  console.log("Current Pathname:", pathname);
-
+  const pathname = usePathname(); 
 
   return (
     <header className="fixed w-full z-50 text-white bg-black py-6">
-      <div className="container mx-auto flex justify-between items-center px-4">
-        {/* Logo */}
-        <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
+      <div className="container mx-auto flex items-center px-6">
+        {/* Logo (Left-Aligned) */}
+        <h1 className="text-3xl font-bold tracking-wide">
           <Link href="/" className="hover:text-blue-400 transition">
             Flomad Labs <span className="text-blue-500">R&D</span>
           </Link>
         </h1>
 
-        {/* Desktop Navigation (Visible on larger screens) */}
-        <nav className="hidden md:flex justify-center flex-1 space-x-8 text-sm font-medium tracking-wide">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex flex-1 justify-end pr-12 space-x-8 text-xl font-medium tracking-wide">
           <Link href="/#focus" className="hover:text-blue-400 transition">
             Focus
           </Link>
@@ -35,9 +31,9 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Mobile Menu Toggle (Visible on smaller screens) */}
+        {/* Mobile Menu Toggle */}
         <button
-          className="block md:hidden text-xl"
+          className="block md:hidden text-2xl ml-auto"
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? "✖" : "☰"}
@@ -46,7 +42,7 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-black bg-opacity-90 py-4 px-4 space-y-4">
+        <nav className="md:hidden bg-black bg-opacity-90 py-4 px-6 space-y-4 text-xl">
           <Link href="/#focus" className="block hover:text-blue-400 transition">
             Focus
           </Link>

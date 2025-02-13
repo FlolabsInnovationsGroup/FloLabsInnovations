@@ -1,14 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 interface CardProps {
-  image: string; // Image URL
-  title: string; // Card title
-  description: string; // Card description
-  bgColor?: string; // Optional background color
-  link?: string; // Optional link for the entire card
-  buttonText?: string; // Optional button text
-  buttonLink?: string; // Optional button link
+  image: string;
+  title: string;
+  description: string;
+  bgColor?: string;
+  link?: string;
+  buttonText?: string;
+  buttonLink?: string;
 }
 
 export default function Card({
@@ -17,7 +19,7 @@ export default function Card({
   description,
   bgColor = "bg-[#121212]",
   link,
-  buttonText,
+  buttonText = "Visit Site",
   buttonLink,
 }: CardProps) {
   const cardContent = (
@@ -40,14 +42,27 @@ export default function Card({
         <p className="text-sm text-gray-400 leading-relaxed mb-4 line-clamp-3">
           {description}
         </p>
-        {buttonText && buttonLink && (
-          <Link
+
+        {/* Visit Site Button - Opens in New Tab */}
+        {buttonLink && (
+          <a
             href={buttonLink}
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
-            aria-label={`Learn more about ${title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-end items-center text-blue-400 font-medium group hover:underline"
+            aria-label={`Visit ${title}`}
+            onClick={(e) => e.stopPropagation()} 
           >
-            {buttonText}
-          </Link>
+            <span>{buttonText}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2 text-blue-400 group-hover:translate-x-1 transition-transform duration-300"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         )}
       </div>
     </div>

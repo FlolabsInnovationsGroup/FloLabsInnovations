@@ -1,13 +1,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { FaChevronUp, FaHome } from "react-icons/fa"; 
 import BackButton from "./BackButton";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname(); 
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
   };
 
   return (
@@ -23,25 +24,17 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-grow container mx-auto px-6">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 mt-12">
+      <footer className="bg-gray-900 text-white py-6 mt-12 relative">
         <div className="container mx-auto flex justify-between items-center px-6">
-          {/* Scroll to Top Button */}
+          {/* Scroll to Top Icon */}
           <button
             onClick={scrollToTop}
-            className="bg-[#0073e6] text-white py-2 px-4 rounded-lg hover:bg-[#005bb5] transition-all duration-200"
+            className="fixed bottom-6 right-6 bg-blue-600/80 p-3 rounded-full hover:bg-blue-500 transition shadow-md"
             aria-label="Scroll to top of the page"
           >
-            Scroll to Top
+            <FaChevronUp className="text-white text-2xl" />
           </button>
 
-          {/* Back to Home Button */}
-          <button
-            onClick={() => window.location.href = "/"}
-            className="bg-[#0073e6] text-white py-2 px-4 rounded-lg hover:bg-[#005bb5] transition-all duration-200"
-            aria-label="Back to homepage"
-          >
-            Back to Home
-          </button>
         </div>
       </footer>
     </div>
