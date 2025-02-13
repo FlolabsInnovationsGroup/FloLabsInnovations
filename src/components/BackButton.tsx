@@ -1,21 +1,18 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Home } from "lucide-react"; // Importing an icon for a better look
+import { Home } from "lucide-react"; 
 
 export default function BackButton() {
   const router = useRouter();
 
   return (
-    <div className="mt-8"> {/* Increased margin to prevent overlap with the header */}
-      <button
-        onClick={() => router.push("/")} // Navigate to homepage
-        className="flex items-center gap-2 bg-[#0073e6] text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-[#005bb5] transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-        aria-label="Go back to the homepage"
-      >
-        <Home size={20} />
-        <span>Back to Home</span>
-      </button>
-    </div>
+    <button
+      onClick={() => router.push("/")} // Navigate to homepage
+      className="fixed top-20 left-6 bg-blue-600/80 p-3 rounded-full hover:bg-blue-500 transition shadow-md z-50"
+      aria-label="Go back to the homepage"
+    >
+      <Home size={24} className="text-white" />
+    </button>
   );
 }

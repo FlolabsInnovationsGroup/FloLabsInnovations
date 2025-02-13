@@ -1,16 +1,18 @@
 import { Poppins } from "next/font/google";
+import { FaChevronDown } from "react-icons/fa"; 
+import Link from "next/link";
 
 // Load Poppins font
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"], // Regular and Bold weights
+  weight: ["400", "700"], 
   variable: "--font-poppins",
 });
 
 export default function Hero() {
   return (
     <section
-      className={`bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
+      className={`relative bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
       role="banner" // Accessibility role for hero sections
       aria-label="Flomad Labs R&D Hero Section"
     >
@@ -32,6 +34,13 @@ export default function Hero() {
           An AI and Robotics Research & Development Collective
         </p>
       </header>
+
+      {/* Scroll Down Button */}
+      <Link href="#focus" aria-label="Scroll down to see more content">
+        <button className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-white hover:text-blue-400 transition">
+          <FaChevronDown className="mt-2 text-3xl animate-bounce" />
+        </button>
+      </Link>
     </section>
   );
 }
