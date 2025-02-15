@@ -8,6 +8,8 @@ export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname(); 
 
+  // Dummy comment to force vercel to re-deploy
+
   return (
     <header className="fixed w-full z-50 text-white bg-black py-6">
       <div className="container mx-auto flex items-center px-6">
