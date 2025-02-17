@@ -9,6 +9,7 @@ export default function Header() {
   const pathname = usePathname(); 
 
   // Dummy comment to force vercel to re-deploy
+   // Dummy comment to force vercel to re-deploy
 
   return (
     <header className="fixed w-full z-50 text-white bg-black py-6">
