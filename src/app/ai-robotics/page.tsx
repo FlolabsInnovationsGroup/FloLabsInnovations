@@ -132,6 +132,57 @@ export default function AIAndRoboticsPage() {
                 around us.
               </p>
             </section>
+
+            <div className="space-y-20">
+  {/* Featured Robotics Videos Section */}
+  <section className="mt-20">
+    <h2 className="text-2xl font-semibold mb-6 text-center">Featured Robotics Videos</h2>
+    <p className="text-lg text-gray-400 leading-relaxed mb-6 text-center">
+      The field of robotics is rapidly evolving with new breakthroughs in AI-driven automation,
+      human-robot interaction, and autonomous systems. Below are some fascinating examples of
+      robotics advancements.
+    </p>
+
+    <div className="text-center mb-16">
+        <h3 className="text-lg font-semibold mb-2">
+          Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills
+        </h3>
+        <a
+          href="https://agile.human2humanoid.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline block text-lg"
+        >
+          Explore Videos on Agile Robotics Research
+        </a>
+      </div>
+
+    {/* Embedded Videos */}
+    <div className="space-y-12 flex flex-col items-center">
+      <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-2 text-center">Xiaomi Automobile Super Factory</h3>
+        <iframe
+          className="w-full h-56 md:h-72 rounded-lg"
+          src="https://www.youtube.com/embed/kYkgXkoEBzg"
+          title="Agile Humanoid Robots"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-2 text-center">2023 Spring Festival Gala</h3>
+        <iframe
+          className="w-full h-56 md:h-72 rounded-lg"
+          src="https://www.youtube.com/embed/JIq_AM4q534"
+          title="Next-Gen AI Robotics"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+
           </div>
         </div>
       </div>
