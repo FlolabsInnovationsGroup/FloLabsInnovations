@@ -24,7 +24,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-grow container mx-auto px-6">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 mt-12 relative">
+      <footer>
         <div className="container mx-auto flex justify-between items-center px-6">
           {/* Scroll to Top Icon */}
           <button
