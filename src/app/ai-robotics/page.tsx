@@ -1,4 +1,5 @@
 import MainLayout from "../../components/MainLayout";
+import Image from 'next/image';
 
 export default function AIAndRoboticsPage() {
     return (
@@ -143,20 +144,6 @@ export default function AIAndRoboticsPage() {
       robotics advancements.
     </p>
 
-    <div className="text-center mb-16">
-        <h3 className="text-lg font-semibold mb-2">
-          Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills
-        </h3>
-        <a
-          href="https://agile.human2humanoid.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline block text-lg"
-        >
-          Explore Videos on Agile Robotics Research
-        </a>
-      </div>
-
     {/* Embedded Videos */}
     <div className="space-y-12 flex flex-col items-center">
       <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
@@ -178,6 +165,20 @@ export default function AIAndRoboticsPage() {
           allowFullScreen
         ></iframe>
       </div>
+
+      {/* ASAP Image Link */}
+      <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-2 text-center">ASAP Initiative</h3>
+                <a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/asappicture.png"
+                    alt="ASAP Initiative"
+                    width={800}
+                    height={450}
+                    className="rounded-lg hover:opacity-80 transition-opacity"
+                  />
+                </a>
+              </div>
     </div>
   </section>
 </div>
