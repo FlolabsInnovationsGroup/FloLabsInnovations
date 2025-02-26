@@ -57,8 +57,9 @@ export default function CaipoPage() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">How the Need for Smarter Productivity Led to CAIPO</h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                The growing demand for practical, sustainable ways to improve health and productivity, both personally and within organizations, inspired the creation of CAIPO—Chief Artificial Intelligence Productivity Officer. Recognizing the connection between individual wellness and organizational success, CAIPO was developed to provide tailored recommendations and support for better outcomes in both areas.
+                The growing demand for practical, sustainable ways to improve health and productivity, both personally and within organizations, inspired the creation of <a href="https://caipo.ai" className="text-blue-400 underline hover:text-blue-500"> CAIPO</a>—Chief Artificial Intelligence Productivity Officer. Recognizing the connection between individual wellness and organizational success, CAIPO was developed to provide tailored recommendations and support for better outcomes in both areas.
               </p>
+
             </section>
   
             {/* Section 5 */}
