@@ -1,4 +1,4 @@
-import MainLayout from "../../components/MainLayout";
+import MainLayout from "../../components/MainLayout"; 
 
 export default function TravelPage() {
   return (
@@ -7,9 +7,24 @@ export default function TravelPage() {
         <div className="container mx-auto max-w-4xl">
           {/* Header Section */}
           <header className="mb-20">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+          <div className="relative w-full h-64 md:h-80 mb-6">
+  {/* Background Image */}
+  <img 
+    src="/images/travelbanner.png"  /* Change src for each page */
+    alt="Banner Image" 
+    className="w-full h-full object-cover rounded-lg"
+  />
+
+  {/* Overlay for Better Readability */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
+</div>
+
+
+            {/* Title moved below the image */}
+            <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-6">
               Smarter Travel with Flomad Labs
             </h1>
+
             <p className="text-lg text-gray-400 leading-relaxed">
               At Flomad Labs, we believe travel should be seamless, intuitive, and tailored to the individual. That’s why we’re developing AI-driven solutions that simplify trip planning, adapt to changing conditions, and enhance the overall experience.
             </p>

@@ -7,10 +7,26 @@ export default function AIAndRoboticsPage() {
       <div className="bg-black text-white min-h-screen py-32 px-6">
         <div className="container mx-auto max-w-4xl">
           {/* Header Section */}
-          <header className="mb-20">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
-              Advancing Robotics: Flomad Labs R&D’s Vision for Intelligent Systems
-            </h1>
+
+          <header className="mb-20 relative w-full max-w-4xl mx-auto">
+                        <div className="relative w-full h-64 md:h-80 mb-6">
+                            {/* Background Image */}
+                            <img 
+                                src="/images/airobobotics.png"  
+                                alt="AI- Robotics"
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+
+                            {/* Overlay for Contrast */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
+                        </div>
+
+                        {/* Title Below the Image */}
+                        <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
+                        Advancing Robotics: Flomad Labs R&D’s Vision for Intelligent Systems
+                        </h1>
+
+            
             <p className="text-lg text-gray-400 leading-relaxed mb-4">
               Flomad Labs R&D is dedicated to advancing AI and robotics, creating innovative systems
               that seamlessly integrate into our lives and industries. With a focus on intelligent automation,
