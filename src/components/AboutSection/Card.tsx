@@ -69,7 +69,12 @@ export default function Card({
   );
 
   return link ? (
-    <Link href={link} className="block group w-full h-full">
+    <Link
+      href={link}
+      target="_blank" // Ensures the entire card opens in a new tab
+      rel="noopener noreferrer"
+      className="block group w-full h-full"
+    >
       <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300 w-full h-full">
         <div className="bg-[#121212] rounded-lg w-full h-full">{cardContent}</div>
       </div>

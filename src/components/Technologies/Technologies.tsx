@@ -33,7 +33,7 @@ export default function Technologies() {
       link: "/animal-vocalization",
     },
     {
-      image: "/images/aiandroboticspic.png",
+      image: "/images/airoboticspics.jpg",
       title: "AI and Robotics",
       description: "We are on the cusp of a revolution.",
       link: "/ai-robotics",
