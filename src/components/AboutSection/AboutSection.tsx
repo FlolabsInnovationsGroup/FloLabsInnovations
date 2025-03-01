@@ -27,7 +27,7 @@ export default function AboutSection() {
       buttonLink: "https://www.caipo.ai/",
     },
     {
-      image: "/images/robocollective.png",
+      image: "/images/robocollective2.png",
       title: "RoboCollective",
       description: "Your very own robot dealership franchise.",
       link: "https://www.robocollective.ai/",
