@@ -6,10 +6,24 @@ export default function MoodchangerPetsPage() {
             <div className="bg-black text-white min-h-screen py-32 px-6">
                 <div className="container mx-auto max-w-4xl">
                     {/* Header Section */}
-                    <header className="mb-20">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+                    <header className="mb-20 relative w-full max-w-4xl mx-auto">
+                        <div className="relative w-full h-64 md:h-80 mb-6">
+                            {/* Background Image */}
+                            <img 
+                                src="/images/moodchangerpets.png" 
+                                alt="Pet Wellness with AI" 
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+
+                            {/* Overlay for Contrast */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
+                        </div>
+
+                        {/* Title Below the Image */}
+                        <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
                             Redefining Pet Wellness Through AI and Connection
                         </h1>
+
                         <p className="text-lg text-gray-400 leading-relaxed mb-4">
                             Technology has helped almost every aspect of human life. At Flomad Labs R&D we have
                             looked at an often-overlooked area: the intricate relationship between pets and their
