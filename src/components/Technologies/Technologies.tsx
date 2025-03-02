@@ -21,7 +21,7 @@ export default function Technologies() {
       link: "/moodchanger-pets",
     },
     {
-      image: "/images/atravelonearth.png",
+      image: "/images/aitravel.png",
       title: "AI Travel on Earth and Beyond",
       description: "Conversational AI is changing the way we explore and travel the world.",
       link: "/ai-travel",
