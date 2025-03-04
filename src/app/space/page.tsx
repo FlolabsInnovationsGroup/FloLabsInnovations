@@ -9,7 +9,7 @@ export default function SpacePage() {
           <header className="mb-20 relative w-full max-w-4xl mx-auto">
           <div className="relative w-full h-64 md:h-80 mb-6">
   <img 
-    src="/images/outerspace.png" 
+    src="/images/outerspace2.png" 
     alt="Outer Space" 
     className="w-full h-full object-cover rounded-lg"
   />

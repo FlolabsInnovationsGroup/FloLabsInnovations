@@ -10,7 +10,7 @@ export default function HealthcarePage() {
                         <div className="relative w-full h-64 md:h-80 mb-6">
                             {/* Background Image */}
                             <img 
-                                src="/images/brainwaves.png" 
+                                src="/images/brainwaves3.png" 
                                 alt="Healthcare Innovation" 
                                 className="w-full h-full object-cover rounded-lg"
                             />

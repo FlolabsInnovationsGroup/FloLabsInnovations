@@ -10,7 +10,7 @@ export default function EducationPage() {
             <div className="relative w-full h-64 md:h-80 mb-6">
               {/* Background Image */}
               <img 
-                src="/images/screens.png" 
+                src="/images/screens2.png" 
                 alt="Computer Screen" 
                 className="w-full h-full object-cover rounded-lg"
               />
