@@ -1,6 +1,16 @@
+"use client";
+
 import MainLayout from "../../components/MainLayout";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function MoodchangerPetsPage() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     return (
         <MainLayout>
             <div className="bg-black text-white min-h-screen py-32 px-6">
@@ -9,11 +19,15 @@ export default function MoodchangerPetsPage() {
                     <header className="mb-20 relative w-full max-w-4xl mx-auto">
                         <div className="relative w-full h-64 md:h-80 mb-6">
                             {/* Background Image */}
-                            <img 
-                                src="/images/moodchangerpets.png" 
-                                alt="Pet Wellness with AI" 
-                                className="w-full h-full object-cover rounded-lg"
-                            />
+                            {isMounted && (
+                                <Image 
+                                    src="/images/moodchangerpets.png" 
+                                    alt="Pet Wellness with AI" 
+                                    className="rounded-lg"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            )}
 
                             {/* Overlay for Contrast */}
                             <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
@@ -36,7 +50,7 @@ export default function MoodchangerPetsPage() {
                             At its core, Moodchanger envisions a unified ecosystem—a single app that gathers and
                             interprets wellness data for pets and gives personalized recommendations to the owner
                             about their pets. This approach marks a significant shift in the pet care market,
-                            addressing the need for both convenience and a deeper understanding of pets’ overall
+                            addressing the need for both convenience and a deeper understanding of pets' overall
                             health.
                         </p>
                     </header>
@@ -49,14 +63,14 @@ export default function MoodchangerPetsPage() {
                                 A Holistic Approach to Pet Care
                             </h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                                At the heart of Moodchanger’s innovation is its ability to combine emotional data with
+                                At the heart of Moodchanger's innovation is its ability to combine emotional data with
                                 traditional health metrics. Using AI-driven voice and mood analysis, the platform can
                                 monitor stress, happiness, and relaxation in pets, offering a level of insight that
                                 was previously not possible.
                             </p>
                             <p className="text-lg text-gray-400 leading-relaxed">
                                 By integrating this emotional data with traditional measures such as activity,
-                                nutrition, and hydration, the platform creates a complete picture of a pet’s health.
+                                nutrition, and hydration, the platform creates a complete picture of a pet's health.
                                 These insights are not merely descriptive but proactive, offering personalized
                                 recommendations and routines to improve both pet and owner well-being.
                             </p>
@@ -68,9 +82,9 @@ export default function MoodchangerPetsPage() {
                                 Connecting Owners and Pets Through AI
                             </h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                                Moodchanger’s mission is not just about health tracking—it’s about deepening the bond
+                                Moodchanger's mission is not just about health tracking—it's about deepening the bond
                                 between pets and their owners. By synchronizing data and insights, the app fosters a
-                                better understanding of a pet’s needs and behaviors, creating a shared journey of
+                                better understanding of a pet's needs and behaviors, creating a shared journey of
                                 wellness. Through monitoring mood patterns or providing tailored activity
                                 recommendations, the platform ensures that pet owners are more in tune with their furry
                                 companions.
@@ -86,7 +100,7 @@ export default function MoodchangerPetsPage() {
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">Smart Devices for Smarter Care</h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                                Moodchanger’s ecosystem extends beyond the app itself, incorporating a network of
+                                Moodchanger's ecosystem extends beyond the app itself, incorporating a network of
                                 smart devices designed to simplify and enhance pet care. From AI-powered collars that
                                 decode vocalizations and detect hazards to robotic companions that stimulate cognitive
                                 activity, these tools integrate with the platform to optimize pet care.
@@ -113,7 +127,7 @@ export default function MoodchangerPetsPage() {
                             <p className="text-lg text-gray-400 leading-relaxed">
                                 By uniting physical and emotional care, automating routines, and advancing research
                                 into animal communication, Flomad Labs aims to transform the way we care for our pets.
-                                This is not just a leap in technology—it’s a step toward a more connected and
+                                This is not just a leap in technology—it's a step toward a more connected and
                                 compassionate future.
                             </p>
                         </section>

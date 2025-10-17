@@ -1,14 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname(); 
+  const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
-  // Dummy comment to force vercel to re-deploy
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="fixed w-full z-50 text-white bg-black py-6">
@@ -34,27 +41,48 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button
-          className="block md:hidden text-2xl ml-auto"
-          onClick={() => setMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? "✖" : "☰"}
-        </button>
+        {isMounted && (
+          <button
+            className="block md:hidden text-2xl ml-auto p-2 hover:text-blue-400 transition"
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? "✖" : "☰"}
+          </button>
+        )}
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <nav className="md:hidden bg-black bg-opacity-90 py-4 px-6 space-y-4 text-xl">
-          <Link href="/#focus" className="block hover:text-blue-400 transition">
-            Focus
-          </Link>
-          <Link href="/#about" className="block hover:text-blue-400 transition">
-            About
-          </Link>
-          <Link href="/#technologies" className="block hover:text-blue-400 transition">
-            Technologies
-          </Link>
-        </nav>
+      {isMounted && (
+        <div
+          className={`md:hidden fixed inset-0 bg-black bg-opacity-95 z-40 transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <Link
+              href="/#focus"
+              className="text-2xl font-medium hover:text-blue-400 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              Focus
+            </Link>
+            <Link
+              href="/#about"
+              className="text-2xl font-medium hover:text-blue-400 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/#technologies"
+              className="text-2xl font-medium hover:text-blue-400 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              Technologies
+            </Link>
+          </div>
+        </div>
       )}
     </header>
   );

@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import { useState, useEffect } from "react";
 
 interface TechnologyCardProps {
   image: string; // URL for the card image
@@ -14,25 +18,32 @@ export default function TechnologyCard({
   description,
   link,
 }: TechnologyCardProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const wrapperClass = "block relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 h-full";
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 flex flex-col h-full">
-      {/* Image Section with Aspect Ratio */}
+    <>
       <div className="relative aspect-w-4 aspect-h-3 overflow-hidden rounded-t-lg">
-        <Image
-          src={image || "/images/default-placeholder.png"} // Fallback image
-          alt={title}
-          fill // Enables responsive sizing within the `relative` container
-          className="object-cover"
-        />
+        {isMounted && (
+          <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
+            <Image
+              src={image || "/images/default-placeholder.png"}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
+            />
+          </Suspense>
+        )}
       </div>
 
-      {/* Content Section */}
       <div className="p-4 flex flex-col flex-grow">
-        {/* Title */}
         <h3 className="text-lg font-bold mb-2">{title}</h3>
-        {/* Description */}
         <p className="text-sm text-gray-400 mb-4 line-clamp-3">{description}</p>
-        {/* Read More Button */}
         <div className="mt-auto flex justify-end items-center">
           <span className="text-sm font-medium text-blue-400 group-hover:underline">
             Read More
@@ -47,23 +58,16 @@ export default function TechnologyCard({
           </svg>
         </div>
       </div>
-    </div>
+    </>
   );
 
-  // If `link` is provided, wrap the card content with a `Link` component
-  return link ? (
-    <Link
-      href={link}
-      className="block group h-full"
-      aria-label={`View details about ${title}`}
-    >
-      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300 h-full">
-        <div className="bg-[#121212] rounded-lg h-full">{cardContent}</div>
-      </div>
+  if (!link) {
+    return <div className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 flex flex-col h-full`}>{cardContent}</div>;
+  }
+
+  return (
+    <Link href={link} className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 flex flex-col h-full group`} aria-label={`View details about ${title}`}>
+      {cardContent}
     </Link>
-  ) : (
-    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 h-full">
-      <div className="bg-[#121212] rounded-lg h-full">{cardContent}</div>
-    </div>
   );
 }

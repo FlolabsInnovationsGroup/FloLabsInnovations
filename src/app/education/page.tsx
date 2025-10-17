@@ -1,6 +1,16 @@
+"use client";
+
 import MainLayout from "../../components/MainLayout";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function EducationPage() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <MainLayout>
       <div className="bg-black text-white min-h-screen py-32 px-6">
@@ -9,11 +19,15 @@ export default function EducationPage() {
           <header className="mb-20 relative w-full max-w-4xl mx-auto">
             <div className="relative w-full h-64 md:h-80 mb-6">
               {/* Background Image */}
-              <img 
-                src="/images/screens2.png" 
-                alt="Computer Screen" 
-                className="w-full h-full object-cover rounded-lg"
-              />
+              {isMounted && (
+                <Image 
+                  src="/images/screens2.png" 
+                  alt="Computer Screen" 
+                  className="rounded-lg"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              )}
 
               {/* Overlay for Contrast */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
@@ -46,7 +60,7 @@ export default function EducationPage() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Fuel Your Journey of Discovery</h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Our internship program is more than a learning experience—it’s a solution to the challenges many face 
+                Our internship program is more than a learning experience—it's a solution to the challenges many face 
                 when seeking meaningful internships and career opportunities.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
@@ -111,7 +125,7 @@ export default function EducationPage() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Join the Mission</h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Flomad Labs R&D is more than an internship school—it’s a platform for immersive learning, fostering innovation, and achieving professional growth. Participants gain hands-on experience in every phase of a project’s lifecycle, from initial research to market launch.
+                Flomad Labs R&D is more than an internship school—it's a platform for immersive learning, fostering innovation, and achieving professional growth. Participants gain hands-on experience in every phase of a project's lifecycle, from initial research to market launch.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
                 By working in collaborative teams, they build the skills and confidence to excel in their careers and contribute to shaping the industries of the future. 

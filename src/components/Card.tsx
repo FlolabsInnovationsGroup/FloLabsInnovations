@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 interface CardProps {
   image: string; // URL for the card image
@@ -18,19 +19,30 @@ export default function Card({
   buttonText,
   buttonLink,
 }: CardProps) {
+  const [imageError, setImageError] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <div
       className={`${bgColor} text-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out`}
     >
       {/* Image Section */}
       <div className="overflow-hidden rounded-lg">
-        <Image
-          src={image || "/images/default-placeholder.png"} // Fallback image
-          alt={title}
-          width={400}
-          height={300}
-          className="w-full h-48 md:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-        />
+        {isMounted && (
+          <Image
+            src={imageError ? "/images/default-placeholder.png" : image}
+            alt={title}
+            width={400}
+            height={300}
+            className="w-full h-48 md:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+            onError={() => setImageError(true)}
+            priority={false}
+          />
+        )}
       </div>
 
       {/* Title Section */}

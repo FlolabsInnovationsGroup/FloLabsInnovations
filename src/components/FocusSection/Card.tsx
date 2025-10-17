@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import { useState, useEffect } from "react";
 
 interface CardProps {
   image: string; // URL for the card image
@@ -9,25 +13,32 @@ interface CardProps {
 }
 
 export default function Card({ image, title, description, link }: CardProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const wrapperClass = "block relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300";
   const cardContent = (
-    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300">
-      {/* Image Section with Aspect Ratio */}
+    <>
       <div className="aspect-w-4 aspect-h-3 relative overflow-hidden rounded-t-lg">
-        <Image
-          src={image || "/images/default-placeholder.png"} // Fallback for missing image
-          alt={title}
-          fill // Fill the parent container
-          className="object-cover"
-        />
+        {isMounted && (
+          <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
+            <Image
+              src={image || "/images/default-placeholder.png"}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
+            />
+          </Suspense>
+        )}
       </div>
 
-      {/* Content Section */}
       <div className="p-6">
-        {/* Title */}
         <h3 className="text-lg font-bold mb-2">{title}</h3>
-        {/* Description */}
         <p className="text-sm text-gray-400 mb-4">{description}</p>
-        {/* Read More Button */}
         <div className="flex justify-end items-center mt-4">
           <span className="text-sm font-medium text-blue-400 group-hover:underline">
             Read More
@@ -42,23 +53,16 @@ export default function Card({ image, title, description, link }: CardProps) {
           </svg>
         </div>
       </div>
-    </div>
+    </>
   );
 
-  // Handle wrapping with `Link` if `link` is provided
-  return link ? (
-    <Link
-      href={link}
-      className="block group"
-      aria-label={`View details about ${title}`}
-    >
-      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300">
-        <div className="bg-[#121212] rounded-lg">{cardContent}</div>
-      </div>
+  if (!link) {
+    return <div className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300`}>{cardContent}</div>;
+  }
+
+  return (
+    <Link href={link} className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 group`} aria-label={`View details about ${title}`}>
+      {cardContent}
     </Link>
-  ) : (
-    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300">
-      <div className="bg-[#121212] rounded-lg">{cardContent}</div>
-    </div>
   );
 }

@@ -1,6 +1,9 @@
+"use client";
+
 import { Poppins } from "next/font/google";
 import { FaChevronDown } from "react-icons/fa"; 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 // Load Poppins font
 const poppins = Poppins({
@@ -10,6 +13,12 @@ const poppins = Poppins({
 });
 
 export default function Hero() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section
       className={`relative bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
@@ -20,7 +29,7 @@ export default function Hero() {
       <header className="text-center">
         {/* Title */}
         <h1
-          className="text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl animate-fadeIn"
+          className={`text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl ${isMounted ? 'animate-fadeIn' : 'opacity-0'}`}
           aria-label="Flomad Labs Research and Development"
         >
           Flomad Labs R&D
@@ -28,7 +37,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p
-          className="text-xl md:text-3xl max-w-3xl leading-relaxed drop-shadow-lg animate-fadeInDelay"
+          className={`text-xl md:text-3xl max-w-3xl leading-relaxed drop-shadow-lg ${isMounted ? 'animate-fadeInDelay' : 'opacity-0'}`}
           aria-label="An AI and Robotics Research and Development Collective"
         >
           An AI and Robotics Research & Development Collective
@@ -36,11 +45,13 @@ export default function Hero() {
       </header>
 
       {/* Scroll Down Button */}
-      <Link href="#focus" aria-label="Scroll down to see more content">
-        <button className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-white hover:text-blue-400 transition">
-          <FaChevronDown className="mt-2 text-3xl animate-bounce" />
-        </button>
-      </Link>
+      {isMounted && (
+        <Link href="#focus" aria-label="Scroll down to see more content">
+          <button className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-white hover:text-blue-400 transition">
+            <FaChevronDown className="mt-2 text-3xl animate-bounce" />
+          </button>
+        </Link>
+      )}
     </section>
   );
 }

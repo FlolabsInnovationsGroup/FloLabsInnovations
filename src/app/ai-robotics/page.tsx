@@ -1,7 +1,16 @@
+"use client";
+
 import MainLayout from "../../components/MainLayout";
 import Image from 'next/image';
+import { useState, useEffect } from "react";
 
 export default function AIAndRoboticsPage() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     return (
       <MainLayout>
       <div className="bg-black text-white min-h-screen py-32 px-6">
@@ -11,11 +20,15 @@ export default function AIAndRoboticsPage() {
           <header className="mb-20 relative w-full max-w-4xl mx-auto">
                         <div className="relative w-full h-64 md:h-80 mb-6">
                             {/* Background Image */}
-                            <img 
+                            {isMounted && (
+                              <Image 
                                 src="/images/airobobotics.png"  
                                 alt="AI- Robotics"
-                                className="w-full h-full object-cover rounded-lg"
-                            />
+                                className="rounded-lg"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                              />
+                            )}
 
                             {/* Overlay for Contrast */}
                             <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
@@ -23,7 +36,7 @@ export default function AIAndRoboticsPage() {
 
                         {/* Title Below the Image */}
                         <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
-                        Advancing Robotics: Flomad Labs R&D’s Vision for Intelligent Systems
+                        Advancing Robotics: Flomad Labs R&D's Vision for Intelligent Systems
                         </h1>
 
             
@@ -34,7 +47,7 @@ export default function AIAndRoboticsPage() {
               manufacturing, mobility, and more.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              At the heart of Flomad Labs’ robotics initiatives is a commitment to research and practical applications.
+              At the heart of Flomad Labs' robotics initiatives is a commitment to research and practical applications.
               By blending artificial intelligence with engineering and user-focused design, Flomad Labs is developing
               systems that are safe, efficient, and capable of working alongside humans.
             </p>
@@ -48,7 +61,7 @@ export default function AIAndRoboticsPage() {
                 Intelligent Robotics for Everyday Impact
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Flomad Labs R&D’s work in robotics focuses on several key areas:
+                Flomad Labs R&D's work in robotics focuses on several key areas:
               </p>
               <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
@@ -139,9 +152,9 @@ export default function AIAndRoboticsPage() {
                 is paving the way for robotics to be seamlessly integrated into everyday life.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                “Our goal is to design robotics systems that work alongside humans, solving problems and opening
-                new possibilities,” says a representative from Flomad Labs. “With intelligent robotics, we’re building
-                tools that empower individuals and industries alike.”
+                "Our goal is to design robotics systems that work alongside humans, solving problems and opening
+                new possibilities," says a representative from Flomad Labs. "With intelligent robotics, we're building
+                tools that empower individuals and industries alike."
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
                 Through its focus on adaptability, collaboration, and user-centered design, Flomad Labs R&D is setting
@@ -182,19 +195,22 @@ export default function AIAndRoboticsPage() {
         ></iframe>
       </div>
 
-      {/* ASAP Image Link */}
+      {/* ASAP Initiative */}
       <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2 text-center">ASAP Initiative</h3>
-                <a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/images/asappicture.png"
-                    alt="ASAP Initiative"
-                    width={800}
-                    height={450}
-                    className="rounded-lg hover:opacity-80 transition-opacity"
-                  />
-                </a>
-              </div>
+        <h3 className="text-xl font-semibold mb-2 text-center">ASAP Initiative</h3>
+        {isMounted && (
+          <a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">
+            <div className="relative w-full aspect-video">
+              <Image
+                src="/images/asappicture.png"
+                alt="ASAP Initiative"
+                fill
+                className="rounded-lg hover:opacity-80 transition-opacity object-cover"
+              />
+            </div>
+          </a>
+        )}
+      </div>
     </div>
   </section>
 </div>

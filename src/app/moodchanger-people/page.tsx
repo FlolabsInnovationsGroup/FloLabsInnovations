@@ -83,7 +83,7 @@ export default function MoodchangerPage() {
                                 recommendations based on real-time and historical data from
                                 wearable devices. The system encourages healthy habits through
                                 proactive nudging, goal tracking, and milestone celebrations.
-                                Moodchanger doesn’t just react to problems—it anticipates them,
+                                Moodchanger doesn't just react to problems—it anticipates them,
                                 offering tools and strategies to prevent issues before they arise.
                             </p>
                         </section>
@@ -111,7 +111,7 @@ export default function MoodchangerPage() {
                             <h2 className="text-2xl font-semibold mb-4">Beyond Data: A Personalized Approach</h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
                                 The Moodchanger app translates data into actionable steps tailored
-                                to users’ needs, whether it’s improving fitness routines, sleep
+                                to users' needs, whether it's improving fitness routines, sleep
                                 quality, or stress management. This holistic approach addresses
                                 physical, mental, and emotional health as interconnected aspects
                                 of overall wellness, empowering users to make lasting changes.
