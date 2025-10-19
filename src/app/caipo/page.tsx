@@ -1,6 +1,16 @@
+"use client";
+
 import MainLayout from "../../components/MainLayout";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function CaipoPage() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     return (
         <MainLayout>
             <div className="bg-black text-white min-h-screen py-32 px-6">
@@ -9,11 +19,15 @@ export default function CaipoPage() {
                     <header className="mb-20 relative w-full max-w-4xl mx-auto">
                         <div className="relative w-full h-64 md:h-80 mb-6">
                             {/* Image */}
-                            <img 
-                                src="/images/soundwaves.png"  
-                                alt="CAIPO AI Productivity"
-                                className="w-full h-full object-cover rounded-lg"
-                            />
+                            {isMounted && (
+                                <Image 
+                                    src="/images/soundwaves.png"  
+                                    alt="CAIPO AI Productivity"
+                                    className="rounded-lg"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            )}
 
                             {/* Overlay for Contrast */}
                             <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
@@ -25,17 +39,17 @@ export default function CaipoPage() {
                         </h1>
 
                         <p className="text-lg text-gray-400 leading-relaxed">
-                            In today’s fast-paced world, the pursuit of AI optimization—whether for individuals or businesses—has become an essential strategy for success. Health, productivity, and performance are no longer addressed with generic advice or short-term fixes. Instead, they require thoughtful, personalized solutions that focus on long-term improvement and measurable outcomes, all driven by the latest AI technologies.
+                            In today's fast-paced world, the pursuit of AI optimization—whether for individuals or businesses—has become an essential strategy for success. Health, productivity, and performance are no longer addressed with generic advice or short-term fixes. Instead, they require thoughtful, personalized solutions that focus on long-term improvement and measurable outcomes, all driven by the latest AI technologies.
                         </p>
                     </header>
 
                     {/* Content Sections */}
-                    <div className="space-y-20">
+                    <div className="space-y-12">
                         {/* Section 1 */}
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">A Personalized Path to Better Health</h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                                For individuals, the focus on health optimization has shifted to strategies that work specifically for them. Gone are the days of general advice or cookie-cutter solutions. People now look for tailored recommendations that align with their goals, whether it’s improving physical fitness, managing stress, or enhancing overall wellness.
+                                For individuals, the focus on health optimization has shifted to strategies that work specifically for them. Gone are the days of general advice or cookie-cutter solutions. People now look for tailored recommendations that align with their goals, whether it's improving physical fitness, managing stress, or enhancing overall wellness.
                             </p>
                         </section>
 
@@ -43,7 +57,7 @@ export default function CaipoPage() {
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">Empowering Organizations to Perform Better</h2>
                             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                                For businesses, AI optimization takes on a slightly different form but with equally important goals. Companies are increasingly looking for strategies that help them perform better—whether it’s improving team productivity, reaching operational targets, or supporting employee well-being.
+                                For businesses, AI optimization takes on a slightly different form but with equally important goals. Companies are increasingly looking for strategies that help them perform better—whether it's improving team productivity, reaching operational targets, or supporting employee well-being.
                             </p>
                         </section>
 

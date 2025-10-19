@@ -12,7 +12,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Follow us</h3>
             <div className="flex justify-center md:justify-start space-x-6">
               <a
-                href="mailto:info@flomadlabs.com"
+                href="mailto:info@flolabsrd.com"
                 className="hover:text-blue-400 transition duration-300"
                 aria-label="Email"
               >

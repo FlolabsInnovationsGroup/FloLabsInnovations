@@ -5,8 +5,8 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import Technologies from "../components/Technologies/Technologies";
 
 export const metadata: Metadata = {
-  title: "Flomad Labs R&D",
-  description: "Innovative research and cutting-edge technologies at Flomad Labs.",
+  title: "Flo Labs R&D",
+  description: "Innovative research and cutting-edge technologies at Flo Labs.",
 };
 
 export default function HomePage() {

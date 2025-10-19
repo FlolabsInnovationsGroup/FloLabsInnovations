@@ -21,11 +21,11 @@ export default function AITravelPage() {
 
                         {/* Title Below the Image */}
                         <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
-                            Conversational AI Is Transforming Travel—And Flomad Labs Is Leading the Way
+                            Conversational AI Is Transforming Travel—And Flo Labs Is Leading the Way
                         </h1>
 
                         <p className="text-lg text-gray-400 leading-relaxed">
-                            The way we plan, book, and experience travel is evolving—fast. At Flomad Labs, we’re not just watching this transformation happen; we’re building the AI-powered tools that make it seamless. Conversational AI is at the heart of this shift, helping travelers navigate complex choices, adapt to unexpected changes, and interact with their journeys in a more human, intuitive way.
+                            The way we plan, book, and experience travel is evolving—fast. At Flo Labs, we're not just watching this transformation happen; we're building the AI-powered tools that make it seamless. Conversational AI is at the heart of this shift, helping travelers navigate complex choices, adapt to unexpected changes, and interact with their journeys in a more human, intuitive way.
                         </p>
                     </header>
 
@@ -38,7 +38,7 @@ export default function AITravelPage() {
                                 Traditional travel planning has always been overwhelming—endless flight comparisons, hotel reviews, itinerary juggling. Even after booking, disruptions like delays and cancellations add layers of stress. That’s where AI-powered travel assistants come in.
                             </p>
                             <p className="text-lg text-gray-400 leading-relaxed">
-                                At Flomad Labs, we’re developing conversational AI that goes beyond answering questions—it anticipates needs and personalizes experiences. Imagine an AI assistant that:
+                                At Flo Labs, we're developing conversational AI that goes beyond answering questions—it anticipates needs and personalizes experiences. Imagine an AI assistant that:
                             </p>
                             <ul className="list-disc pl-6 space-y-4 text-gray-300">
                                 <li>Knows your travel style—preferring boutique stays over big chains or adventure over relaxation.</li>
@@ -64,15 +64,15 @@ export default function AITravelPage() {
                             </p>
                             <h3 className="text-xl font-semibold mb-2">3. AI That Listens, Learns, and Adapts</h3>
                             <p className="text-lg text-gray-400 leading-relaxed">
-                                Flomad Labs is building AI that remembers preferences over time. The more you travel, the smarter it gets—learning what you like, what you avoid, and how to make recommendations that actually matter.
+                                Flo Labs is building AI that remembers preferences over time. The more you travel, the smarter it gets—learning what you like, what you avoid, and how to make recommendations that actually matter.
                             </p>
                         </section>
 
                         {/* Section 3 */}
                         <section>
-                            <h2 className="text-2xl font-semibold mb-4">Why Flomad Labs?</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Why Flo Labs?</h2>
                             <p className="text-lg text-gray-400 leading-relaxed">
-                                The future of travel isn’t just about AI—it’s about intelligent, human-centered AI that makes journeys simpler, more efficient, and more enjoyable. At Flomad Labs, we are focused on creating conversational AI solutions that blend cutting-edge technology with real-world travel needs.
+                                The future of travel isn't just about AI—it's about intelligent, human-centered AI that makes journeys simpler, more efficient, and more enjoyable. At Flo Labs, we are focused on creating conversational AI solutions that blend cutting-edge technology with real-world travel needs.
                             </p>
                         </section>
 
@@ -80,7 +80,7 @@ export default function AITravelPage() {
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">The Future of AI-Enhanced Travel Is Here</h2>
                             <p className="text-lg text-gray-400 leading-relaxed">
-                                Conversational AI isn’t a distant innovation—it’s already redefining travel. And at Flomad Labs, we’re making sure it does more than just answer questions. We’re creating AI-driven travel experiences that feel personal, responsive, and genuinely helpful.
+                                Conversational AI isn't a distant innovation—it's already redefining travel. And at Flo Labs, we're making sure it does more than just answer questions. We're creating AI-driven travel experiences that feel personal, responsive, and genuinely helpful.
                             </p>
                         </section>
                     </div>

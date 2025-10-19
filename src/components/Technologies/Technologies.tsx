@@ -48,7 +48,7 @@ export default function Technologies() {
           Technologies
         </h2>
         <p className="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-12">
-          Breakthrough technologies Flomad Labs R&D is focusing on.
+          Breakthrough technologies Flo Labs R&D is focusing on.
         </p>
 
         {/* Grid of Technology Cards */}
