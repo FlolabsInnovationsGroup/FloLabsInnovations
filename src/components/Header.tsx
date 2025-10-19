@@ -23,7 +23,7 @@ export default function Header() {
         {/* Logo (Left-Aligned) */}
         <h1 className="text-3xl font-bold tracking-wide">
           <Link href="/" className="hover:text-blue-400 transition">
-            Flomad Labs <span className="text-blue-500">R&D</span>
+            Flo Labs <span className="text-blue-500">R&D</span>
           </Link>
         </h1>
 

@@ -39,7 +39,7 @@ export default function MoodchangerPetsPage() {
                         </h1>
 
                         <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                            Technology has helped almost every aspect of human life. At Flomad Labs R&D we have
+                            Technology has helped almost every aspect of human life. At Flo Labs R&D we have
                             looked at an often-overlooked area: the intricate relationship between pets and their
                             owners. Our Moodchanger platform combines artificial intelligence and smart devices into
                             a user-friendly app, offering a new and natural approach to pet care. More than just a
@@ -126,7 +126,7 @@ export default function MoodchangerPetsPage() {
                             </p>
                             <p className="text-lg text-gray-400 leading-relaxed">
                                 By uniting physical and emotional care, automating routines, and advancing research
-                                into animal communication, Flomad Labs aims to transform the way we care for our pets.
+                                into animal communication, Flo Labs aims to transform the way we care for our pets.
                                 This is not just a leap in technology—it's a step toward a more connected and
                                 compassionate future.
                             </p>

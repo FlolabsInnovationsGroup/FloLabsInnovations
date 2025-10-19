@@ -21,11 +21,11 @@ export default function HealthcarePage() {
 
                         {/* Title Below the Image */}
                         <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
-                            Smarter Healthcare: Flomad Labs' Approach to AI-Powered Innovation
+                            Smarter Healthcare: Flo Labs' Approach to AI-Powered Innovation
                         </h1>
 
                         <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                            The intersection of artificial intelligence and healthcare is opening new possibilities for personalized, data-driven, and accessible care. At Flomad Labs, we're exploring how AI-powered systems, wearable technology, and intelligent automation can enhance patient experiences, streamline processes, and make healthcare smarter.
+                            The intersection of artificial intelligence and healthcare is opening new possibilities for personalized, data-driven, and accessible care. At Flo Labs, we're exploring how AI-powered systems, wearable technology, and intelligent automation can enhance patient experiences, streamline processes, and make healthcare smarter.
                         </p>
                         <p className="text-lg text-gray-400 leading-relaxed mb-4">
                             While we're in the early stages of research and development, our goal is clear: to create AI-driven healthcare solutions that empower individuals and improve medical decision-making.

@@ -16,8 +16,8 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Flomad Labs R&D",
-  description: "Discover Flomad Labs' innovative research and technologies.",
+  title: "Flo Labs R&D",
+  description: "Discover Flo Labs' innovative research and technologies.",
   image: "https://www.flolabsrd.com/images/metaflomadlabs.png", 
   url: "https://www.flolabsrd.com",
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
         <meta property="og:image" content={metadata.image} />
         <meta property="og:url" content={metadata.url} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Flomad Labs" />
+        <meta property="og:site_name" content="Flo Labs" />
 
         {/* Twitter Metadata */}
         <meta name="twitter:card" content="summary_large_image" />

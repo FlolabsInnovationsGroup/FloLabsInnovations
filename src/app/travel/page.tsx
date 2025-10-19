@@ -22,11 +22,11 @@ export default function TravelPage() {
 
             {/* Title moved below the image */}
             <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-6">
-              Smarter Travel with Flomad Labs
+              Smarter Travel with Flo Labs
             </h1>
 
             <p className="text-lg text-gray-400 leading-relaxed">
-              At Flomad Labs, we believe travel should be seamless, intuitive, and tailored to the individual. That’s why we’re developing AI-driven solutions that simplify trip planning, adapt to changing conditions, and enhance the overall experience.
+              At Flo Labs, we believe travel should be seamless, intuitive, and tailored to the individual. That's why we're developing AI-driven solutions that simplify trip planning, adapt to changing conditions, and enhance the overall experience.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
               Through conversational AI, dynamic itineraries, and real-time travel insights, we’re exploring ways to reduce stress, improve decision-making, and make every journey feel effortless.
@@ -77,18 +77,18 @@ export default function TravelPage() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">A More Sustainable Approach to Travel</h2>
               <p className="text-lg text-gray-400 leading-relaxed">
-                Flomad Labs is committed to rethinking the way we travel responsibly. We’re researching eco-friendly travel recommendations, optimized route planning, and tools to minimize unnecessary emissions.
+                Flo Labs is committed to rethinking the way we travel responsibly. We're researching eco-friendly travel recommendations, optimized route planning, and tools to minimize unnecessary emissions.
               </p>
             </section>
 
             {/* Section 4 */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">What’s Next for Flomad Labs?</h2>
+              <h2 className="text-2xl font-semibold mb-4">What's Next for Flo Labs?</h2>
               <p className="text-lg text-gray-400 leading-relaxed">
                 We’re still in the early stages of R&D, but our goal is clear: to build AI-driven tools that make travel easier, more personal, and more intuitive. Whether you’re planning a business trip or a spontaneous getaway, travel shouldn’t feel like work—it should feel like an adventure.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                At Flomad Labs, we’re working to make that a reality.
+                At Flo Labs, we're working to make that a reality.
               </p>
             </section>
           </div>

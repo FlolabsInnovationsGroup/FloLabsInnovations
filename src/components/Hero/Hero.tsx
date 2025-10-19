@@ -23,16 +23,16 @@ export default function Hero() {
     <section
       className={`relative bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
       role="banner" // Accessibility role for hero sections
-      aria-label="Flomad Labs R&D Hero Section"
+      aria-label="Flo Labs R&D Hero Section"
     >
       {/* Content Wrapper */}
       <header className="text-center">
         {/* Title */}
         <h1
           className={`text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl ${isMounted ? 'animate-fadeIn' : 'opacity-0'}`}
-          aria-label="Flomad Labs Research and Development"
+          aria-label="Flo Labs Research and Development"
         >
-          Flomad Labs R&D
+          Flo Labs R&D
         </h1>
 
         {/* Subtitle */}

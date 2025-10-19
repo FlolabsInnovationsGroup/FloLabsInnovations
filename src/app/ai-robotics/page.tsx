@@ -36,19 +36,19 @@ export default function AIAndRoboticsPage() {
 
                         {/* Title Below the Image */}
                         <h1 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">
-                        Advancing Robotics: Flomad Labs R&D's Vision for Intelligent Systems
+                        Advancing Robotics: Flo Labs R&D's Vision for Intelligent Systems
                         </h1>
 
             
             <p className="text-lg text-gray-400 leading-relaxed mb-4">
-              Flomad Labs R&D is dedicated to advancing AI and robotics, creating innovative systems
+              Flo Labs R&D is dedicated to advancing AI and robotics, creating innovative systems
               that seamlessly integrate into our lives and industries. With a focus on intelligent automation,
               adaptability, and human-centric design, the company is addressing challenges across healthcare,
               manufacturing, mobility, and more.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              At the heart of Flomad Labs' robotics initiatives is a commitment to research and practical applications.
-              By blending artificial intelligence with engineering and user-focused design, Flomad Labs is developing
+              At the heart of Flo Labs' robotics initiatives is a commitment to research and practical applications.
+              By blending artificial intelligence with engineering and user-focused design, Flo Labs is developing
               systems that are safe, efficient, and capable of working alongside humans.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function AIAndRoboticsPage() {
                 Intelligent Robotics for Everyday Impact
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Flomad Labs R&D's work in robotics focuses on several key areas:
+                Flo Labs R&D's work in robotics focuses on several key areas:
               </p>
               <ul className="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
@@ -135,7 +135,7 @@ export default function AIAndRoboticsPage() {
                 Collaboration for Progress
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Flomad Labs R&D works closely with universities, technology companies, and industry partners
+                Flo Labs R&D works closely with universities, technology companies, and industry partners
                 to drive progress in robotics. These collaborations ensure that developments are aligned with
                 practical needs while advancing the robotics field as a whole.
               </p>
@@ -147,17 +147,17 @@ export default function AIAndRoboticsPage() {
                 A Future with Intelligent Machines
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
-                Flomad Labs envisions a future where intelligent machines complement human capabilities,
+                Flo Labs envisions a future where intelligent machines complement human capabilities,
                 enhancing efficiency, safety, and innovation. By focusing on research-driven solutions, the company
                 is paving the way for robotics to be seamlessly integrated into everyday life.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed mb-4">
                 "Our goal is to design robotics systems that work alongside humans, solving problems and opening
-                new possibilities," says a representative from Flomad Labs. "With intelligent robotics, we're building
+                new possibilities," says a representative from Flo Labs. "With intelligent robotics, we're building
                 tools that empower individuals and industries alike."
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                Through its focus on adaptability, collaboration, and user-centered design, Flomad Labs R&D is setting
+                Through its focus on adaptability, collaboration, and user-centered design, Flo Labs R&D is setting
                 a new standard for robotics, ensuring these technologies are built to support and enhance the world
                 around us.
               </p>
