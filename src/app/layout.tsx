@@ -18,7 +18,7 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "Flo Labs R&D",
   description: "Discover Flo Labs' innovative research and technologies.",
-  image: "https://www.flolabsrd.com/images/metaflomadlabs.png", 
+  image: "https://www.flolabsrd.com/images/flolabssocial.png", 
   url: "https://www.flolabsrd.com",
 };
 
