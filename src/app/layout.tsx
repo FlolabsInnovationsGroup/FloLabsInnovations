@@ -18,7 +18,7 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "Flo Labs R&D",
   description: "Discover Flo Labs' innovative research and technologies.",
-  image: "https://www.flolabsrd.com/images/metaflomadlabs.png", 
+  image: "https://www.flolabsrd.com/images/flolabssocial.png", 
   url: "https://www.flolabsrd.com",
 };
 
@@ -34,6 +34,10 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
 
         {/* Open Graph / Facebook Metadata */}
         <meta property="og:title" content={metadata.title} />
