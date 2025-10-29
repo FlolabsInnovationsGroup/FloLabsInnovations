@@ -21,11 +21,18 @@ export default function Header() {
     <header className="fixed w-full z-50 text-white bg-black py-6">
       <div className="container mx-auto flex items-center px-6">
         {/* Logo (Left-Aligned) */}
-        <h1 className="text-3xl font-bold tracking-wide">
-          <Link href="/" className="hover:text-blue-400 transition">
-            Flo Labs <span className="text-blue-500">R&D</span>
+        <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition">
+            <img 
+              src="/images/FloLabs_logo.svg" 
+              alt="Flo Labs R&D" 
+              className="h-10 w-auto"
+            />
+            <h1 className="text-3xl font-bold tracking-wide">
+              Flo Labs <span className="text-blue-500">R&D</span>
+            </h1>
           </Link>
-        </h1>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-1 justify-end pr-12 space-x-8 text-xl font-medium tracking-wide">
