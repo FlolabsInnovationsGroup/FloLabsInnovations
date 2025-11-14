@@ -1,5 +1,6 @@
 import "../styles/globals.css"; // Global CSS styles
 import { Inter, Roboto_Mono } from "next/font/google";
+import type { Metadata } from "next";
 import Header from "../components/Header"; // Import your Header component
 import Footer from "../components/Footer"; // Import your Footer component
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -15,11 +16,34 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Flo Labs R&D",
   description: "Discover Flo Labs' innovative research and technologies.",
-  image: "https://www.flolabsrd.com/images/flolabssocial.png", 
-  url: "https://www.flolabsrd.com",
+  icons: {
+    icon: "/images/FloLabs_logo.svg",
+    shortcut: "/images/FloLabs_logo.svg",
+  },
+  openGraph: {
+    title: "Flo Labs R&D",
+    description: "Discover Flo Labs' innovative research and technologies.",
+    images: [
+      {
+        url: "https://www.flolabsrd.com/images/flolabssocial.png",
+        width: 1200,
+        height: 630,
+        alt: "Flo Labs R&D",
+      },
+    ],
+    url: "https://www.flolabsrd.com",
+    type: "website",
+    siteName: "Flo Labs",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flo Labs R&D",
+    description: "Discover Flo Labs' innovative research and technologies.",
+    images: ["https://www.flolabsrd.com/images/flolabssocial.png"],
+  },
 };
 
 export default function RootLayout({
@@ -29,31 +53,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Basic Metadata */}
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Favicon */}
-        <link rel="icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
-
-        {/* Open Graph / Facebook Metadata */}
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Flo Labs" />
-
-        {/* Twitter Metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.image} />
-      </head>
-
       <body
         className={`${inter.variable} ${robotoMono.variable} antialiased bg-gradient-to-b from-black via-[#121212] to-[#1e1e1e] text-white`}
       >
