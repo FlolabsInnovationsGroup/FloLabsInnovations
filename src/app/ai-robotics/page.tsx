@@ -199,7 +199,12 @@ export default function AIAndRoboticsPage() {
       <div className="w-full max-w-lg md:max-w-2xl border border-gray-700 p-2 rounded-lg shadow-lg">
         <h3 className="text-xl font-semibold mb-2 text-center">ASAP Initiative</h3>
         {isMounted && (
-          <a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://agile.human2humanoid.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Visit ASAP Initiative website"
+          >
             <div className="relative w-full aspect-video">
               <Image
                 src="/images/asappicture.png"

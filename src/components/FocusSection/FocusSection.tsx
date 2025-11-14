@@ -42,8 +42,8 @@ export default function FocusSection() {
 
         {/* Cards Grid - Updated Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
-          {focuses.map((focus, index) => (
-            <div key={index} className="w-full max-w-[350px]">
+          {focuses.map((focus) => (
+            <div key={focus.link} className="w-full max-w-[350px]">
               <Card
                 image={focus.image}
                 title={focus.title}

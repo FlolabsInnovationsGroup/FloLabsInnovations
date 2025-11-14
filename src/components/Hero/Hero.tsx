@@ -20,13 +20,12 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      className={`relative bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black/60 via-black/30 to-black/60 ${poppins.variable}`}
-      role="banner" // Accessibility role for hero sections
+    <header
+      className={`relative bg-header-bg bg-cover bg-center text-white h-screen flex flex-col justify-center items-center ${poppins.variable}`}
       aria-label="Flo Labs R&D Hero Section"
     >
       {/* Content Wrapper */}
-      <header className="text-center">
+      <div className="text-center">
         {/* Title */}
         <h1
           className={`text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl ${isMounted ? 'animate-fadeIn' : 'opacity-0'}`}
@@ -42,16 +41,19 @@ export default function Hero() {
         >
           An AI and Robotics Research & Development Collective
         </p>
-      </header>
+      </div>
 
       {/* Scroll Down Button */}
       {isMounted && (
         <Link href="#focus" aria-label="Scroll down to see more content">
-          <button className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-white hover:text-blue-400 transition">
+          <button 
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-white hover:text-blue-400 transition"
+            aria-label="Scroll down"
+          >
             <FaChevronDown className="mt-2 text-3xl animate-bounce" />
           </button>
         </Link>
       )}
-    </section>
+    </header>
   );
 }

@@ -1,11 +1,11 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { FaChevronUp, FaHome } from "react-icons/fa"; 
+import { FaChevronUp } from "react-icons/fa"; 
 import BackButton from "./BackButton";
 import { useState, useEffect } from "react";
 
-export default function MainLayout({ children }: { children: React.ReactNode }) {
+export default function MainLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname(); 
   const [isMounted, setIsMounted] = useState(false);
 

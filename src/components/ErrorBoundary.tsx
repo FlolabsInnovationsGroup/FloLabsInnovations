@@ -36,7 +36,7 @@ export default class ErrorBoundary extends Component<Props, State> {
                 We apologize for the inconvenience. Please try refreshing the page or contact support if the problem persists.
               </p>
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => globalThis.location.reload()}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
               >
                 Refresh Page

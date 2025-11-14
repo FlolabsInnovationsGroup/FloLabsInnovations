@@ -1,20 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Header() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -70,21 +68,21 @@ export default function Header() {
             <Link
               href="/#focus"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               Focus
             </Link>
             <Link
               href="/#about"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/#technologies"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               Technologies
             </Link>

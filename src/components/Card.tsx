@@ -18,7 +18,7 @@ export default function Card({
   bgColor = "bg-[#121212]",
   buttonText,
   buttonLink,
-}: CardProps) {
+}: Readonly<CardProps>) {
   const [imageError, setImageError] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
