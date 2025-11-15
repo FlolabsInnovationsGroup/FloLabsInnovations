@@ -19,55 +19,52 @@ interface StrapiResponse<T> {
 }
 
 interface StrapiImage {
-  data: {
-    id: number;
-    attributes: {
-      url: string;
-      alternativeText?: string;
-      width: number;
-      height: number;
-    };
-  };
+  id: number;
+  documentId: string;
+  url: string;
+  alternativeText?: string;
+  width: number;
+  height: number;
+  formats?: any;
 }
 
 export interface FocusArea {
   id: number;
-  attributes: {
-    title: string;
-    description: string;
-    slug: string;
-    image: StrapiImage;
-    order: number;
-    createdAt: string;
-    updatedAt: string;
-  };
+  documentId: string;
+  title: string;
+  description: string;
+  link: string;
+  coverImage?: StrapiImage;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
 
 export interface Technology {
   id: number;
-  attributes: {
-    title: string;
-    description: string;
-    slug: string;
-    image: StrapiImage;
-    order: number;
-    createdAt: string;
-    updatedAt: string;
-  };
+  documentId: string;
+  name: string;
+  icon?: string;
+  description: string;
+  image?: StrapiImage;
+  link?: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
 
 export interface AboutProject {
   id: number;
-  attributes: {
-    title: string;
-    description: string;
-    image: StrapiImage;
-    externalLink: string;
-    buttonText: string;
-    order: number;
-    createdAt: string;
-    updatedAt: string;
-  };
+  documentId: string;
+  title: string;
+  description: string;
+  image?: StrapiImage;
+  link?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
 
 /**
@@ -113,19 +110,19 @@ export function getStrapiMediaUrl(url: string | undefined): string {
  * Fetch all Focus Areas
  */
 export async function getFocusAreas(): Promise<StrapiResponse<FocusArea[]>> {
-  return fetchAPI('/focus-areas?populate=*&sort=order:asc');
+  return fetchAPI('/focus-areas?populate=coverImage');
 }
 
 /**
  * Fetch all Technologies
  */
 export async function getTechnologies(): Promise<StrapiResponse<Technology[]>> {
-  return fetchAPI('/technologies?populate=*&sort=order:asc');
+  return fetchAPI('/technologies?populate=image');
 }
 
 /**
  * Fetch all About Projects
  */
 export async function getAboutProjects(): Promise<StrapiResponse<AboutProject[]>> {
-  return fetchAPI('/about-projects?populate=*&sort=order:asc');
+  return fetchAPI('/about-projects?populate=image');
 }

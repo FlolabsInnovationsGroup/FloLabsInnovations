@@ -1,76 +1,49 @@
-import Card from "../AboutSection/Card"; 
+import Card from "../AboutSection/Card";
+import { getAboutProjects, getStrapiMediaUrl } from "@/lib/strapi";
+import AboutSectionFallback from "./AboutSectionFallback";
 
-export default function AboutSection() {
-  const projects = [
-    {
-      image: "/images/conversationalai.png",
-      title: "Travel AI",
-      description: "Conversational AI for personalized trip planning.",
-      link: "https://www.flomadtravel.com/",
-      buttonText: "Visit Site",
-      buttonLink: "https://www.flomadtravel.com/",
-    },
-    {
-      image: "/images/aiagirobotics.png",
-      title: "Advanced AI & Robotics Education",
-      description: "Empowering learners through experiential learning.",
-      link: "https://flomad.international/",
-      buttonText: "Visit Site",
-      buttonLink: "https://flomad.international/",
-    },
-    {
-      image: "/images/caipo.png",
-      title: "Chief AI Productivity Officer (CAIPO)",
-      description: "Optimizing lifestyles through AI-driven IoT technologies.",
-      link: "https://www.caipo.ai/",
-      buttonText: "Visit Site",
-      buttonLink: "https://www.caipo.ai/",
-    },
-    {
-      image: "/images/robocollective2.png",
-      title: "RoboCollective",
-      description: "Your very own robot dealership franchise.",
-      link: "https://www.robocollective.ai/",
-      buttonText: "Visit Site",
-      buttonLink: "https://www.robocollective.ai/",
-    },
-  ];
+export default async function AboutSection() {
+  try {
+    const response = await getAboutProjects();
+    const projects = response.data;
 
-  return (
-    <section
-      id="about"
-      className="relative text-white py-32 flex items-center justify-center"
-      style={{
-        backgroundImage: `url('/images/tunnelbackground.png')`,
-        backgroundSize: "80%", // Zoom out to show more of the tunnel
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "100vh",
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay */}
-      <div className="container mx-auto px-6 lg:px-12">
+    return (
+      <section
+        id="about"
+        className="relative text-white py-32 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/tunnelbackground.png')`,
+          backgroundSize: "80%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "100vh",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="container mx-auto px-6 lg:px-12">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white drop-shadow-lg">
+            About Us
+          </h2>
 
-        <h2 className="text-5xl font-bold text-center mb-12 text-white drop-shadow-lg">
-          About Us
-        </h2>
-
-        {/* Updated Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
-          {projects.map((project, index) => (
-            <div key={index} className="w-full max-w-[350px]">
-              <Card
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                buttonText={project.buttonText} 
-                buttonLink={project.buttonLink} 
-              />
-            </div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
+            {projects.map((project) => (
+              <div key={project.id} className="w-full max-w-[350px]">
+                <Card
+                  image={getStrapiMediaUrl(project.image?.url)}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link || '#'}
+                  buttonText={project.buttonText || 'Visit Site'}
+                  buttonLink={project.buttonLink || project.link || '#'}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  } catch (error) {
+    console.error('Failed to load about projects from Strapi, using fallback:', error);
+    return <AboutSectionFallback />;
+  }
 }

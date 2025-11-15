@@ -24,10 +24,10 @@ export default async function FocusSection() {
             {focuses.map((focus) => (
               <div key={focus.id} className="w-full max-w-[350px]">
                 <Card
-                  image={getStrapiMediaUrl(focus.attributes.image.data.attributes.url)}
-                  title={focus.attributes.title}
-                  description={focus.attributes.description}
-                  link={`/${focus.attributes.slug}`}
+                  image={getStrapiMediaUrl(focus.coverImage?.url)}
+                  title={focus.title}
+                  description={focus.description}
+                  link={focus.link}
                 />
               </div>
             ))}
