@@ -48,3 +48,4 @@ next-env.d.ts
 .history/
 strapi-dev.log
 scripts/
+# Trigger Vercel redeploy with env vars
