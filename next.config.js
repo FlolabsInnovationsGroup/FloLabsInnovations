@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: 'flomadlabsdotcom-strapi-production.up.railway.app',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {
