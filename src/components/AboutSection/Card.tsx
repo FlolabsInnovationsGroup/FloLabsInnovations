@@ -30,9 +30,8 @@ export default function Card({
     setIsMounted(true);
   }, []);
 
-  const content = (
-    <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 w-full h-full">
-      <div className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 w-full h-full flex flex-col`}>
+  const cardContent = (
+    <div className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 w-full h-full flex flex-col`}>
         <div className="relative w-full h-48 overflow-hidden">
           {isMounted && (
             <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
@@ -98,10 +97,16 @@ export default function Card({
         rel="noopener noreferrer"
         className="block group w-full h-full"
       >
-        {content}
+        <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300 w-full h-full">
+          {cardContent}
+        </div>
       </Link>
     );
   }
 
-  return <div className="block w-full h-full">{content}</div>;
+  return (
+    <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 w-full h-full">
+      {cardContent}
+    </div>
+  );
 }

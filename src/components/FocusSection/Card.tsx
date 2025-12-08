@@ -19,9 +19,8 @@ export default function Card({ image, title, description, link }: CardProps) {
     setIsMounted(true);
   }, []);
 
-  const wrapperClass = "block relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300";
   const cardContent = (
-    <>
+    <div className="bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 overflow-hidden">
       <div className="aspect-w-4 aspect-h-3 relative overflow-hidden rounded-t-lg">
         {isMounted && (
           <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
@@ -53,16 +52,22 @@ export default function Card({ image, title, description, link }: CardProps) {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 
   if (!link) {
-    return <div className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300`}>{cardContent}</div>;
+    return (
+      <div className="relative rounded-lg p-[4px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300">
+        {cardContent}
+      </div>
+    );
   }
 
   return (
-    <Link href={link} className={`${wrapperClass} bg-[#121212] text-white rounded-lg shadow-md transform transition-transform duration-300 group`} aria-label={`View details about ${title}`}>
-      {cardContent}
+    <Link href={link} className="block group" aria-label={`View details about ${title}`}>
+      <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] transition-all duration-300">
+        {cardContent}
+      </div>
     </Link>
   );
 }
