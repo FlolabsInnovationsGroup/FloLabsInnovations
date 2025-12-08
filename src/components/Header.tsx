@@ -43,6 +43,9 @@ export default function Header() {
           <Link href="/#technologies" className="hover:text-blue-400 transition">
             Technologies
           </Link>
+          <Link href="https://flolabs.international" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+            Internships
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
