@@ -30,8 +30,8 @@ export default function Card({
     setIsMounted(true);
   }, []);
 
-  const content = (
-    <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#1e3a8a] group-hover:via-[#2563eb] group-hover:to-[#3b82f6] hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 w-full h-full">
+  const gradientWrapper = (
+    <div className="relative rounded-lg p-[4px] bg-transparent group-hover:bg-gradient-to-r group-hover:via-[#2563eb] group-hover:to-[#3b82f6] hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300 w-full h-full group-hover:from-[#1e3a8a]">
       <div className={`${bgColor} text-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 w-full h-full flex flex-col`}>
         <div className="relative w-full h-48 overflow-hidden">
           {isMounted && (
@@ -98,10 +98,10 @@ export default function Card({
         rel="noopener noreferrer"
         className="block group w-full h-full"
       >
-        {content}
+        {gradientWrapper}
       </Link>
     );
   }
 
-  return <div className="block w-full h-full">{content}</div>;
+  return <div className="block w-full h-full">{gradientWrapper}</div>;
 }
