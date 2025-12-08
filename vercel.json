@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/internship",
+      "destination": "https://flolabs.international",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "destination": "https://www.flolabsrd.com/$1",
       "permanent": true,
