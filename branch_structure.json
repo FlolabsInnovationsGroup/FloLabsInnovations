@@ -1,0 +1,27 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feature/strapi-cms",
+    "main",
+    "mohamedabelmohsen",
+    "newbranch",
+    "newfixes",
+    "pagefixes"
+  ],
+  "parent": {
+    "feature/strapi-cms": "main",
+    "main": null,
+    "mohamedabelmohsen": "main",
+    "newbranch": "main",
+    "newfixes": "main",
+    "pagefixes": "main"
+  },
+  "order": [
+    "main",
+    "feature/strapi-cms",
+    "mohamedabelmohsen",
+    "newbranch",
+    "newfixes",
+    "pagefixes"
+  ]
+}
