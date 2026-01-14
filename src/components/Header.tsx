@@ -20,10 +20,12 @@ export default function Header() {
       <div className="container mx-auto flex items-center px-6">
         {/* Logo (Left-Aligned) */}
         <div className="flex items-center space-x-3">
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition">
-            <img 
-              src="/images/FloLabs_logo.svg" 
-              alt="Flo Labs R&D" 
+          <Link
+            href="/"
+            className="flex items-center space-x-3 hover:opacity-80 transition">
+            <img
+              src="/images/FloLabs_logo.svg"
+              alt="FloLabs Innovations Group"
               className="h-10 w-auto"
             />
             <h1 className="text-3xl font-bold tracking-wide">
@@ -40,10 +42,16 @@ export default function Header() {
           <Link href="/#about" className="hover:text-blue-400 transition">
             About
           </Link>
-          <Link href="/#technologies" className="hover:text-blue-400 transition">
+          <Link
+            href="/#technologies"
+            className="hover:text-blue-400 transition">
             Technologies
           </Link>
-          <Link href="https://flolabs.international" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+          <Link
+            href="https://flolabs.international"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition">
             Internships
           </Link>
         </nav>
@@ -53,8 +61,7 @@ export default function Header() {
           <button
             className="block md:hidden text-2xl ml-auto p-2 hover:text-blue-400 transition"
             onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
             {isMenuOpen ? "✖" : "☰"}
           </button>
         )}
@@ -65,28 +72,24 @@ export default function Header() {
         <div
           className={`md:hidden fixed inset-0 bg-black bg-opacity-95 z-40 transition-transform duration-300 ease-in-out ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
+          }`}>
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             <Link
               href="/#focus"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Focus
             </Link>
             <Link
               href="/#about"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
             <Link
               href="/#technologies"
               className="text-2xl font-medium hover:text-blue-400 transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Technologies
             </Link>
           </div>
