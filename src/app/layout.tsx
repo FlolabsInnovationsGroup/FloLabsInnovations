@@ -16,9 +16,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Flo Labs R&D",
+  title: "FloLabs Innovations Group",
   description: "Discover Flo Labs' innovative research and technologies.",
-  image: "https://www.flolabsrd.com/images/flolabssocial.png", 
+  image: "https://www.flolabsrd.com/images/flolabssocial.png",
   url: "https://www.flolabsrd.com",
 };
 
@@ -34,10 +34,14 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         {/* Favicon */}
         <link rel="icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/images/FloLabs_logo.svg" type="image/svg+xml" />
+        <link
+          rel="shortcut icon"
+          href="/images/FloLabs_logo.svg"
+          type="image/svg+xml"
+        />
 
         {/* Open Graph / Facebook Metadata */}
         <meta property="og:title" content={metadata.title} />
@@ -55,8 +59,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${inter.variable} ${robotoMono.variable} antialiased bg-gradient-to-b from-black via-[#121212] to-[#1e1e1e] text-white`}
-      >
+        className={`${inter.variable} ${robotoMono.variable} antialiased bg-gradient-to-b from-black via-[#121212] to-[#1e1e1e] text-white`}>
         <ErrorBoundary>
           {/* Global Header */}
           <Header />

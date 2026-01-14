@@ -5,7 +5,7 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import Technologies from "../components/Technologies/Technologies";
 
 export const metadata: Metadata = {
-  title: "Flo Labs R&D",
+  title: "FloLabs Innovations Group",
   description: "Innovative research and cutting-edge technologies at Flo Labs.",
 };
 

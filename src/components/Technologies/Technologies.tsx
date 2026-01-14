@@ -5,7 +5,8 @@ export default function Technologies() {
     {
       image: "/images/caipotech.png",
       title: "CAIPO",
-      description: "Optimizing health and performance: personal and organizational growth.",
+      description:
+        "Optimizing health and performance: personal and organizational growth.",
       link: "/caipo",
     },
     {
@@ -23,7 +24,8 @@ export default function Technologies() {
     {
       image: "/images/aitravel.png",
       title: "AI Travel on Earth and Beyond",
-      description: "Conversational AI is changing the way we explore and travel the world.",
+      description:
+        "Conversational AI is changing the way we explore and travel the world.",
       link: "/ai-travel",
     },
     {
@@ -48,7 +50,7 @@ export default function Technologies() {
           Technologies
         </h2>
         <p className="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-12">
-          Breakthrough technologies Flo Labs R&D is focusing on.
+          Breakthrough technologies FloLabs Innovations Group is focusing on.
         </p>
 
         {/* Grid of Technology Cards */}
