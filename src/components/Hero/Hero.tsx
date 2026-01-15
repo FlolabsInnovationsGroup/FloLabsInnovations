@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="text-center">
         {/* Title */}
         <h1
-          className={`text-6xl md:text-8xl font-bold tracking-tight mb-6 drop-shadow-xl ${
+          className={`text-5xl md:text-6xl font-bold tracking-tight mb-6 drop-shadow-xl ${
             isMounted ? "animate-fadeIn" : "opacity-0"
           }`}
           aria-label="Flo Labs Research and Development">

@@ -28,8 +28,9 @@ export default function Header() {
               alt="FloLabs Innovations Group"
               className="h-10 w-auto"
             />
-            <h1 className="text-3xl font-bold tracking-wide">
-              Flo Labs <span className="text-blue-500">R&D</span>
+            <h1 className="text-2xl font-bold tracking-wide text-white">
+              FloLabs Innovations
+              <span className="text-blue-500"> Group </span>
             </h1>
           </Link>
         </div>
