@@ -1,4 +1,4 @@
-import Card from "../AboutSection/Card"; 
+import Card from "./Card";
 
 export default function AboutSection() {
   const projects = [
@@ -46,11 +46,10 @@ export default function AboutSection() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay */}
+      }}>
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>{" "}
+      {/* Overlay */}
       <div className="container mx-auto px-6 lg:px-12">
-
         <h2 className="text-5xl font-bold text-center mb-12 text-white drop-shadow-lg">
           About Us
         </h2>
@@ -64,8 +63,8 @@ export default function AboutSection() {
                 title={project.title}
                 description={project.description}
                 link={project.link}
-                buttonText={project.buttonText} 
-                buttonLink={project.buttonLink} 
+                buttonText={project.buttonText}
+                buttonLink={project.buttonLink}
               />
             </div>
           ))}

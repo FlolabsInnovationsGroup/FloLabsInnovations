@@ -1,4 +1,4 @@
-import TechnologyCard from "../Technologies/Card";
+import TechnologyCard from "./Card";
 
 export default function Technologies() {
   const technologies = [

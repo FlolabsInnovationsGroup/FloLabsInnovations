@@ -1,29 +1,33 @@
-import Card from "../FocusSection/Card";
+import Card from "./Card";
 
 export default function FocusSection() {
   const focuses = [
     {
       image: "/images/education.png",
       title: "Education",
-      description: "Revolutionizing learning through AI-powered educational tools and platforms.",
+      description:
+        "Revolutionizing learning through AI-powered educational tools and platforms.",
       link: "/education",
     },
     {
       image: "/images/healthcare.png",
       title: "Healthcare",
-      description: "Advancing medical research and patient care with cutting-edge AI.",
+      description:
+        "Advancing medical research and patient care with cutting-edge AI.",
       link: "/healthcare",
     },
     {
       image: "/images/travel.png",
       title: "Travel",
-      description: "Enhancing travel experiences with intelligent automation and personalization.",
+      description:
+        "Enhancing travel experiences with intelligent automation and personalization.",
       link: "/travel",
     },
     {
       image: "/images/space.png",
       title: "Space",
-      description: "Advancing space exploration and travel with AI-driven technologies and innovation.",
+      description:
+        "Advancing space exploration and travel with AI-driven technologies and innovation.",
       link: "/space",
     },
   ];
@@ -37,7 +41,8 @@ export default function FocusSection() {
         </h2>
         {/* Section Subtitle */}
         <p className="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-12">
-          Pioneering breakthrough technologies that reshape industries and elevate human potential.
+          Pioneering breakthrough technologies that reshape industries and
+          elevate human potential.
         </p>
 
         {/* Cards Grid - Updated Layout */}
